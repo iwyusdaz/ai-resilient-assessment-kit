@@ -1,0 +1,13 @@
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+
+# Dependencies (resolved from the workspace root node_modules; never committed)
+node_modules/
+
+# OS noise
+.DS_Store
+
+# Dry-run pipeline output (stub results, never used as results)
+dry-run/

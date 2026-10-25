@@ -1,0 +1,20 @@
+{
+  "name": "ai-resilient-assessment-kit",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Three common university assignments stress-tested against generative AI and redesigned with explicit AI-use levels, process evidence and new rubrics — with a decision tool and a ready-to-run 90-minute faculty workshop. Content CC BY 4.0, code MIT.",
+  "type": "module",
+  "scripts": {
+    "eval:pending": "node research/run-stress-test.mjs && node evaluation/run-review-panel.mjs && node evaluation/run-simulated-participants.mjs",
+    "eval:stress-test": "node research/run-stress-test.mjs",
+    "eval:stress-test-redesign": "node research/run-stress-test.mjs --redesign",
+    "eval:panel": "node evaluation/run-review-panel.mjs",
+    "eval:participants": "node evaluation/run-simulated-participants.mjs",
+    "test:decision-tool": "node evaluation/tests/decision-tool-tests.mjs",
+    "test:md-links": "node evaluation/tests/check-md-links.mjs"
+  },
+  "notes": "Playwright, axe-core and dotenv are resolved from the workspace root node_modules (Node resolution walks up the directory tree). Nothing here is duplicated or committed to node_modules.",
+  "engines": {
+    "node": ">=20"
+  }
+}
