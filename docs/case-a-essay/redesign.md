@@ -10,6 +10,8 @@ nav_order: 3
 
 **Course outcome (SOC 101, week 9):** "Students can construct a sociologically-informed argument: select and verify appropriate scholarly evidence, reason from it, and defend the argument's key choices in dialogue with objections."
 
+**Course AI-literacy outcome (also assessed here):** "Students can evaluate AI assistance critically — judging when to use it, verifying what it produces, and disclosing how they used it." The rubric's criterion 4 (AI-use judgment & disclosure) is aligned to this outcome; it is not covered by the week-9 outcome alone.
+
 **What counts as valid evidence of that outcome:**
 
 1. An argument the student can trace through their own sources (not just cite).
@@ -76,6 +78,7 @@ The [new rubric](rubric.html) has 5 criteria × 4 levels: argument construction,
 ## Implementation notes
 
 - Deadlines spaced weeks 5, 7, 8, 10, 11 — no two stages due in the same week.
+- Course-grade budget: the stages total 35% where the single essay was 25%; at adoption the course team re-weights Essay 1 by −10% (same take-home logic applies to it — see the [faculty notes](faculty-notes.html#grading-time)).
 - Tutorial time in weeks 5 and 8 doubles as proposal/feedback workshops, so the redesign does not add contact hours.
 - TAs grade stages 1–2 against a one-page checklist (~4 min/submission); the lecturer grades defences with the published question bank.
 - Full grading-time analysis, the 200+ scaling plan and the accommodation plan are in the [faculty notes](faculty-notes.html).

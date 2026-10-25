@@ -11,7 +11,7 @@ nav_order: 2
 
 ## Method
 
-Per the [stress-test protocol](https://github.com/iwyusdaz/ai-resilient-assessment-kit/blob/main/research/stress-test-protocol.md): the original brief is given to two different models with three prompt strategies; outputs are anonymised, shuffled, and scored blind by a judge panel where no model scores its own output (MODEL_A outputs → MODEL_B + MODEL_C; MODEL_B outputs → MODEL_A + MODEL_C). Case B adds a **computation-check pass**: judges flag every arithmetic, formula and interpretation error, and errors are counted per submission.
+Per the [stress-test protocol](../research/stress-test-protocol.html): the original brief is given to two different models with three prompt strategies; outputs are anonymised, shuffled, and scored blind by a judge panel where no model scores its own output (MODEL_A outputs → MODEL_B + MODEL_C; MODEL_B outputs → MODEL_A + MODEL_C). Case B adds a **computation-check pass**: judges flag every arithmetic, formula and interpretation error, and errors are counted per submission.
 
 | Run parameter | Value |
 |---|---|

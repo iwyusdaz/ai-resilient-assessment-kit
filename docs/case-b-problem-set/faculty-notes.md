@@ -12,11 +12,13 @@ Cost, scaling and equity notes for the [redesign](redesign.html). Setting is the
 
 | Component | Original | Redesign | Notes |
 |---|---|---|---|
-| Weekly sets ×5 | 10–12 min × 250 × 5 weeks (≈ 90–100 h per term across TAs) | **~1.5 min × 250 × 5 (≈ 19 h)** — completion + log check | The answer key stops mattering; the log is 5 lines |
-| Secure checks ×2 | (nothing equivalent — midterm only) | ~4 min × 250 × 2 (≈ 33 h) | Four questions each; Q4 is 1 mark; marks fast |
-| Net | ≈ 90–100 h | ≈ 52 h + calibration (≈ 4 h) | **About half the original marking load**, with far more assurance |
+| Weekly sets ×5 | 10–12 min × 250 × 5 weeks (≈ 210–250 h per term across TAs) | **~1.5 min × 250 × 5 (≈ 31 h)** — completion + log check | The answer key stops mattering; the log is 5 lines |
+| Secure checks ×2 | (nothing equivalent before the midterm) | ~4 min × 250 × 2 (≈ 33 h) | Four questions each; Q4 is 1 mark; marks fast |
+| Net | ≈ 210–250 h | ≈ 64 h of marking + calibration (≈ 4 h) ≈ **68 h** | **Roughly 30% of the original marking load** (≈ 68 h vs ≈ 210–250 h), with far more assurance |
 
-The design trades marking answers for marking logs and short checks. If logs feel too light, the alternative is sampling deep-read 10% of sets per week (adds ≈ 8 h).
+**Where the grade weight comes from:** the original five sets were worth 10% *each* (≈ 50% of the course grade — see the [original brief](original.html)). The redesign cuts the practice lane to 10% total and moves 20% of the freed weight into the two secure checks; the sets-and-checks block drops from ≈ 50% to 30% of the course grade, and the remaining 20% is re-allocated by the course team at adoption (at Lakeside State, to the final examination). The midterm (20%) is unchanged.
+
+The design trades marking answers for marking logs and short checks. If logs feel too light, the alternative is sampling a deep read of 10% of sets per week (25 scripts × 10–12 min ≈ 4–5 h per week, ≈ 20–25 h across the term).
 
 ## Scaling to 200+ students
 

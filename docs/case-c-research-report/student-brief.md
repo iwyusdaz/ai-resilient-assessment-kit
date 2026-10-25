@@ -12,11 +12,13 @@ nav_order: 4
 
 You will run a small real study with your team, keep a lab notebook of what actually happened, and write the report with AI allowed for language — openly. Here's the honest logic: **the report is no longer the proof that you did the work; the notebook, the memo and the Q&A are.** AI can write a lovely report about data it never touched. It cannot run your study or defend your decisions.
 
+*Weights below are raw marks — they add to 38. The course handbook caps this task at 30% of your final grade, so every component is scaled by 30/38 when the marks are recorded. The relative weights are what matter.*
+
 ### Week 8 — Team registration + your twist (2%) — <span class="aias aias-2" aria-hidden="true"></span> **AI level 2 · AI Planning**
 
 Teams of 4–5. The whole class studies the same broad topic (stress and sleep around assessment time — approved, safe, no sign-up burden). Your team registers a **twist**: which measure variant, which slice of people, which context (exam week vs. ordinary week, dorms vs. commuters...). 200 words on what you chose and why. AI may help you brainstorm options — the choice and the justification are yours.
 
-### Weeks 8–9 — Collect your data — <span class="aias aias-1" aria-hidden="true"></span> **AI level 1 · No AI for the human part**
+### Weeks 8–9 — Collect your data (8%) — <span class="aias aias-1" aria-hidden="true"></span> **AI level 1 · No AI for the human part**
 
 Each team collects 30–50 responses using the shared, pre-approved form. That's the part only your team can do. (Can't collect? Use the class fallback dataset — say so in the notebook; it's a normal route, not a failure.) For cleaning the file afterwards, see the next line.
 
@@ -34,7 +36,7 @@ Full APA report (~1,800 words) on **your team's data**. You may use AI for langu
 
 ### Week 12–13 — Q&A (6%) — <span class="aias aias-1" aria-hidden="true"></span> **AI level 1 · No AI**
 
-Ten minutes per team, in tutorial. Each member answers two questions from a published bank, on the part of the study **you** led: one method decision, one result or limitation, one "what next". Live, recorded, or written (two questions, ~250 words each) — your choice, equal weight, decided once at the start of term.
+Ten minutes per team, in tutorial. Each member answers three short questions from a published bank, on the part of the study **you** led: one method decision, one result or limitation, one "what next". Live, recorded, or written (three questions, ~250 words each) — your choice, equal weight, decided once at the start of term.
 
 ## Why these rules (the honest version)
 

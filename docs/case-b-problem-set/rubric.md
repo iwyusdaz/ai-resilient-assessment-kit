@@ -25,7 +25,7 @@ nav_order: 5
 | Secure check 1 (week 3) | 10% | 1–3 (scaled to 30 pts → 10%) |
 | Secure check 2 (week 6) | 10% | 1–3 |
 | Midterm (unchanged, secure) | 20% | 1–3 |
-| **Assessment-change summary** | | Practice lane 10% (was 10% for answers); secure lane 20% (was 0% before midterm) |
+| **Assessment-change summary** | | Practice lane 10% total (the five sets were 10% *each* under the original design — ≈50% of the course grade, graded for answers); secure lane 20%, new in weeks 1–6 |
 
 ## Alignment to the course outcome
 

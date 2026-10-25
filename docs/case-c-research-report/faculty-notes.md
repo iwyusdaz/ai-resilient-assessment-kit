@@ -12,14 +12,16 @@ Cost, scaling and equity notes for the [redesign](redesign.html). Setting is the
 
 | Component | Original | Redesign | Notes |
 |---|---|---|---|
-| Per-report marking | ~45 min × 120 (≈ 90 h/term) | **~10–12 min per student total** (≈ 22–24 h) | Breakdown below |
+| Per-report marking | ~45 min × 120 (≈ 90 h/term) | **~13.5–14.5 min per student total** (≈ 27–29 h) | Rows below sum to the total |
 | Notebook | — | ~3 min (checklist + 1 spot-check of two entries) | The spot-check looks for dated, problem-centred entries |
 | Memo (500 words) | — | ~4 min | Criterion 3; the Q&A covers it again per student |
 | Report | (the 45 min above) | ~4–5 min | Marked on structure/accuracy/interpretation; analysis correctness is re-checked only where the memo and Q&A disagree with it |
-| Q&A | — | ~1.5 min per student (team session ≈ 15 min/tutorial) | Three anchors per member: method / result-or-limitation / next step |
-| Twist registration | — | ~1 min (checklist) | Coordinator reviews the 24 team registrations once (≈ 1 h) |
+| Q&A | — | ~2 min per student (10-minute team session in tutorial) | Three anchors per member: method / result-or-limitation / next step |
+| Twist registration | — | ~0.5 min per student (the coordinator reviews all 24 team registrations in one ≈ 1 h batch) | Amortised: ≈ 2.5 min per team |
 
-**Net:** roughly a quarter of the original marking load, with better assurance — because the Q&A replaces the impossible task of verifying every student's statistics by re-reading prose.
+**Where the grade weight comes from:** nowhere new — the redesigned components' raw weights sum to 38 points, and the course handbook caps the task at 30% of the final grade, so every component scales by 30/38 (shown in the [rubric's gradebook mapping](rubric.html)). The original task also carried 30%.
+
+**Net:** roughly 30% of the original marking load (≈ 27–29 h vs ≈ 90 h), with better assurance — because the Q&A replaces the impossible task of verifying every student's statistics by re-reading prose.
 
 ## Scaling to 200+ students
 

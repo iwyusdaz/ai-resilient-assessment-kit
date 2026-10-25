@@ -45,7 +45,7 @@ nav_order: 3
 
 **The structure (weeks 1–6):**
 
-1. **Weekly problem sets — open lane (15% total, 5 sets).** AI level: **Full AI**. Students may use AI as a tutor and even to solve, **with a one-line-per-question use log**: "asked AI about Q3's CI logic; it misstated the df; I redid it with the textbook formula." Graded for submission + log quality (2 completion points per set), not for answers — the answers are now cheap.
+1. **Weekly problem sets — open lane (10% total, 5 sets).** AI level: **Full AI**. Students may use AI as a tutor and even to solve, **with a one-line-per-question use log**: "asked AI about Q3's CI logic; it misstated the df; I redid it with the textbook formula." Graded for submission + log quality (2 completion points per set), not for answers — the answers are now cheap.
 2. **Two in-class secure checks (weeks 3 and 6 — 20% total).** Twenty minutes, in tutorial, no devices: 4 questions on the same skills the sets practised (one computation, one interpretation, one "spot the error", one concept). AI level: **No AI**. Weighted at 10% each — more than the whole open lane.
 3. **Class-survey data items (inside each set and the checks).** In week 2 the class collects a small shared dataset (two questions per student, ~250 responses: e.g., commute time and sleep hours). Interpretation questions run on *this* dataset; students must reference the actual numbers.
 4. **"Find and fix" items (in sets from week 3).** Each set includes one AI-generated solution with a planted or naturally-occurring error; students must find it, fix it, and explain the fix in two sentences. AI level: **AI Exploration** — using AI to help hunt the error is fine, logged.

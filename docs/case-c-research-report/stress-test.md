@@ -11,7 +11,7 @@ nav_order: 2
 
 ## Method
 
-Per the [stress-test protocol](https://github.com/iwyusdaz/ai-resilient-assessment-kit/blob/main/research/stress-test-protocol.md), with a Case C addition: the brief is accompanied by a **data summary** (the provided dataset's codebook and descriptive statistics) as the prompt context, because that is how a student would use AI realistically — pasting the summary, not the full 150-row file.
+Per the [stress-test protocol](../research/stress-test-protocol.html), with a Case C addition: the brief is accompanied by a **data summary** (the provided dataset's codebook and descriptive statistics) as the prompt context, because that is how a student would use AI realistically — pasting the summary, not the full 150-row file.
 
 | Run parameter | Value |
 |---|---|

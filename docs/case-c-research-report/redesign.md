@@ -43,14 +43,14 @@ nav_order: 3
 
 **A team-run class study with a graded lab notebook, a disclosed-AI report, and a short Q&A.** The write-up stays AI-assisted on purpose; the *decisions* move into evidence AI cannot supply: dated notebook entries, justified analysis choices, and a defence.
 
-**The structure (weeks 7–12, 30% total):**
+**The structure (weeks 7–12).** Component weights below are raw marks summing to 38 points; the course handbook caps the task at 30% of the final grade, so they are scaled by 30/38 in the gradebook (shown honestly in the [rubric](rubric.html)).
 
 1. **Week 8 — team setup (2%).** Teams of 4–5. Each team registers a *twist* on the shared protocol: they choose the measure variant, the sampling slice, or the context (e.g., collect during exam week vs. ordinary weeks). The twist must be registered and justified in 200 words. AI level: **AI Planning** — AI may help brainstorm the twist; the choice is the team's.
-2. **Weeks 8–9 — data collection (part of 8%).** Each team collects 30–50 responses on the shared topic (stress and sleep before assessments — a safe, approved topic with the department's standing class-study approval). A provided-dataset fallback exists for anyone who cannot collect (see [faculty notes](faculty-notes.html#accessibility-and-accommodations)).
+2. **Weeks 8–9 — data collection + dataset (8%).** Each team collects 30–50 responses on the shared topic (stress and sleep before assessments — a safe, approved topic with the department's standing class-study approval). A provided-dataset fallback exists for anyone who cannot collect (see [faculty notes](faculty-notes.html#accessibility-and-accommodations)).
 3. **Weeks 8–11 — lab notebook (8%).** Dated entries (minimum six): what was decided, what went wrong, what changed. One entry must analyse a *problem* (e.g., a misread response, a data cleaning decision) and how it was handled. AI level: **No AI** for the notebook — it is the record of *their* work. Spot-checked, not audited.
 4. **Week 11 — analysis-choices memo (4%).** 500 words: which test, why, what assumptions were checked, what result would have changed the decision. AI level: **AI Collaboration** — AI may help check logic; the decision and its defence are the student's, and the Q&A probes them.
 5. **Week 12 — report (10%).** Full APA report on the team's data. AI level: **AI Collaboration for language and clarity only, with disclosure** — not for analysis decisions or results sentences. The rubric grades structure, accuracy and interpretation, not solo fluency.
-6. **Week 12–13 — structured Q&A (6%).** Ten minutes per team, in tutorial: each member answers on their own role — one method decision, one result, one limitation and next step. Written alternative available with equal weight. AI level: **No AI**.
+6. **Week 12–13 — structured Q&A (6%).** Ten minutes per team, in tutorial: each member answers on their own role — three anchors, one method decision, one result or limitation, and one next step. Written alternative available with equal weight. AI level: **No AI**.
 
 ## AI-use level for each part of the task
 
@@ -81,7 +81,7 @@ The [new rubric](rubric.html) has 5 criteria × 4 levels: research design & owne
 
 - One shared protocol + team twists keeps ethics simple: the department's standing class-study approval covers the topic; twists stay within it (no new measures, no vulnerable groups).
 - Teams hand in one notebook but each member tags the entries they led; the Q&A is individual.
-- TA marking time actually drops slightly (see [faculty notes](faculty-notes.html)); the notebook is checked against a checklist and the Q&A replaces re-running everyone's statistics.
+- TA marking time drops to roughly 30% of the original load (see [faculty notes](faculty-notes.html)); the notebook is checked against a checklist and the Q&A replaces re-running everyone's statistics.
 - Limitations are stated honestly in [what this does not solve](#what-this-does-not-solve).
 
 ## What this does NOT solve

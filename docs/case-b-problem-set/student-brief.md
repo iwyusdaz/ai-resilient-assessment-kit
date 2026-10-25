@@ -12,7 +12,7 @@ nav_order: 4
 
 This course has two kinds of statistics work, and they have different AI rules:
 
-- **Practice sets (weekly, 15% total):** where you *learn* the methods. **AI is allowed here as a tutor** — that's the point.
+- **Practice sets (weekly, 10% total):** where you *learn* the methods. **AI is allowed here as a tutor** — that's the point.
 - **In-class checks (weeks 3 and 6, 10% each):** where you *show* what stuck. No devices, 20 minutes, four questions on the same skills you practised.
 
 The weights tell you what we care about: the secure checks count for more than all five practice sets together. Practice is practice; the checks are the evidence.

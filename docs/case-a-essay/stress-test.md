@@ -7,11 +7,11 @@ nav_order: 2
 # Case A — stress test
 
 {: .note }
-**Status of this page.** The protocol, prompts and vulnerability analysis are complete. **All score tables are PENDING — requires API key.** The vulnerability analysis below is our **design reasoning, not measured results**: it states what we expect AI to satisfy easily and why, based on the task's design and the published evidence cited in the [literature notes](https://github.com/iwyusdaz/ai-resilient-assessment-kit/blob/main/research/literature-notes.md). When the pipeline runs, measured scores will replace the PENDING tables and any analysis that the results contradict will be revised.
+**Status of this page.** The protocol, prompts and vulnerability analysis are complete. **All score tables are PENDING — requires API key.** The vulnerability analysis below is our **design reasoning, not measured results**: it states what we expect AI to satisfy easily and why, based on the task's design and the published evidence cited in the [literature notes](../research/literature-notes.html). When the pipeline runs, measured scores will replace the PENDING tables and any analysis that the results contradict will be revised.
 
 ## Method
 
-Per the [stress-test protocol](https://github.com/iwyusdaz/ai-resilient-assessment-kit/blob/main/research/stress-test-protocol.md): the original brief above was (will be) given to two different AI models with three prompt strategies, outputs anonymised and shuffled, then scored blind by a two-judge panel in which no model judges its own output.
+Per the [stress-test protocol](../research/stress-test-protocol.html): the original brief above was (will be) given to two different AI models with three prompt strategies, outputs anonymised and shuffled, then scored blind by a two-judge panel in which no model judges its own output.
 
 | Run parameter | Value |
 |---|---|
@@ -84,4 +84,4 @@ This is the analysis that drove the [redesign](redesign.html). It is our judgmen
 
 ## Re-test (redesigned task)
 
-**PENDING — requires API key.** The [redesign](redesign.html) will be stress-tested with the same three strategies against the **new** rubric (`research/run-stress-test.mjs --redesign`). Parts of the redesign are deliberately open (AI Collaboration on the annotated-source commentary), so AI can still complete those parts well — that is by design. The re-test question is whether the *secure* parts (the verification gate, the defence) still discriminate. The table will appear here after the run.
+**PENDING — requires API key.** The [redesign](redesign.html) will be stress-tested with the same three strategies against the **new** rubric (`research/run-stress-test.mjs --redesign`). Parts of the redesign are deliberately open (AI Collaboration on the draft and its AI-use log), so AI can still complete those parts well — that is by design. The re-test question is whether the *secure* parts (the verification gate, the defence) still discriminate. The table will appear here after the run.
