@@ -1,6 +1,6 @@
 # Attribution
 
-How this kit credits the work it builds on. Licenses: learning content is CC BY 4.0, code is MIT (see LICENSE and LICENSE-CODE). Third-party sources below were each fetched and verified on **2026-10-25** unless noted; access method is recorded in [research/literature-notes.md](research/literature-notes.md).
+How this kit credits the work it builds on. Licenses: learning content is CC BY 4.0, code is MIT (see LICENSE and LICENSE-CODE). Third-party sources below were each fetched and verified on **2026-10-25** unless noted; access method is recorded in [docs/research/literature-notes.md](docs/research/literature-notes.md).
 
 ## Frameworks and approaches used with attribution
 

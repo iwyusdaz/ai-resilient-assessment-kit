@@ -1,6 +1,6 @@
 ---
 title: Literature notes
-nav_order: 12
+nav_order: 1
 parent: Research
 has_toc: false
 ---
@@ -38,7 +38,7 @@ Biggs, J. & Tang, C., *Teaching for Quality Learning at University* (Open Univer
 | 5 | **AI Exploration** |
 
 - A 2025 JUTLP article "Reimagining the AIAS" (<https://doi.org/10.53761/rrm4y757>) is cited on the official site as the revised model's publication. DOI resolved via the site's own citation list; article page not fetched — cite the site for the current level names.
-- This kit uses AIAS 2.1 level names on every student-facing brief ([ai-use-levels](../docs/ai-use-levels.html)). Icons are always paired with text labels.
+- This kit uses AIAS 2.1 level names on every student-facing brief ([ai-use-levels](../ai-use-levels.html)). Icons are always paired with text labels.
 
 ### Two-lane approach — University of Sydney
 
@@ -67,7 +67,7 @@ All three primary sources below were fetched on 2026-10-25.
 
 ## 4. Process-based assessment
 
-- Evidence base for staged drafts, annotated bibliographies, process logs and short oral checks ("viva-vee"): these are standard process-assessment moves, and the Sydney two-lane work and TEQSA advice both recommend interactive oral formats for the secure lane. Ratings in [approaches](../docs/approaches.html) are labelled **strong / emerging / anecdotal** with this caveat: strong = multiple independent studies or institutional adoptions; emerging = single-site studies or documented pilots; anecdotal = practitioner reports. No new meta-analysis was performed for this kit.
+- Evidence base for staged drafts, annotated bibliographies, process logs and short oral checks ("viva-vee"): these are standard process-assessment moves, and the Sydney two-lane work and TEQSA advice both recommend interactive oral formats for the secure lane. Ratings in [approaches](../approaches.html) are labelled **strong / emerging / anecdotal** with this caveat: strong = multiple independent studies or institutional adoptions; emerging = single-site studies or documented pilots; anecdotal = practitioner reports. No new meta-analysis was performed for this kit.
 - Oral-assessment revival context: Liu & Bridgeman (2023) and Bridgeman, Weeks & Liu (2024) document institutional adoption of interactive orals as the secure lane at scale.
 
 ## 5. Equity and accessibility
@@ -89,4 +89,4 @@ All dated 2026-10-25.
 
 ## 7. What these notes are for
 
-These notes feed the [six design principles](../docs/principles.html) and the [approach comparison](../docs/approaches.html). They are the research layer only — the design decisions and their reasoning live in the docs.
+These notes feed the [six design principles](../principles.html) and the [approach comparison](../approaches.html). They are the research layer only — the design decisions and their reasoning live in the docs.

@@ -21,8 +21,8 @@ Faculty AI guidance is mostly generic: "use more orals", "ban it", "teach prompt
 
 ## My approach (analysis → design → build → evaluate)
 
-1. **Research grounding.** Verified sources with access dates (AIAS 2.1 level names; Sydney's two-lane approach; detection-reliability evidence) — [research/literature-notes.md](research/literature-notes.md).
-2. **Stress-test protocol.** Each original brief → three prompt strategies × two models → blind scoring by a judge panel where no model judges its own output — [research/stress-test-protocol.md](research/stress-test-protocol.md). The pipeline is built and dry-run tested; **scores are PENDING until API keys are added**.
+1. **Research grounding.** Verified sources with access dates (AIAS 2.1 level names; Sydney's two-lane approach; detection-reliability evidence) — [docs/research/literature-notes.md](docs/research/literature-notes.md).
+2. **Stress-test protocol.** Each original brief → three prompt strategies × two models → blind scoring by a judge panel where no model judges its own output — [docs/research/stress-test-protocol.md](docs/research/stress-test-protocol.md). The pipeline is built and dry-run tested; **scores are PENDING until API keys are added**.
 3. **Vulnerability analysis (published now, labelled as reasoning).** Which rubric criteria AI satisfies for free — fluency, plausible citations, template analysis — and which need a student's own process or live defence.
 4. **Three full redesigns.** Each: redesign rationale → per-stage AI-use levels (AIAS 2.1, icon + text) → student brief in plain language → new rubric with alignment table → faculty notes with grading-time arithmetic, 200+ scaling, accommodations, multilingual notes.
 5. **Tooling.** A six-question accessible decision tool and a complete 90-minute workshop (guide, slides, canvas, handout, pre/post survey).
@@ -43,9 +43,9 @@ Faculty AI guidance is mostly generic: "use more orals", "ban it", "teach prompt
 
 **What was measured (or is pending):**
 
-- Automated accessibility: axe-core 4.11.1 — decision tool and workshop slides: **0 violations** (local, 2026-10-25); full-site audit re-run against the live Pages build after publishing. Scripted Playwright tests of the decision tool: **20/20** (keyboard-only completion, focus management, live-region announcements, Back/Start-over, error alerts, 320 px and 256 px reflow, no data leaves the page). Internal link integrity: **137 links, all resolve**.
+- Automated accessibility: axe-core 4.11.1 — decision tool and workshop slides: **0 violations** (local, 2026-10-25; re-verified 2026-10-26 after the revision round). Scripted Playwright tests of the decision tool: **28/28** (keyboard-only completion, first-reveal focus with focus-stays-put on recompute, live-region announcements, Back/Start-over, error alerts, low-confidence warning, 320 px and 256 px reflow, no data leaves the page). Internal link integrity: **163 links across 43 files, all resolve**.
 - **AI stress-test scores: PENDING — requires API key.** The case pages show the vulnerability *reasoning* (labelled as such), exact prompts, and empty score tables. When `npm run eval:pending` runs with real keys, measured scores replace the tables and this section is updated.
-- Agent review (fresh-context reviewer agent): findings feed `docs/evaluation/revisions.md`. Labelled as agent review; same-model limitation stated.
+- Agent review (fresh-context reviewer agent, 2026-10-26): full review in `evaluation/agent-review.md`; dispositions and changes logged in `docs/evaluation/revisions.md` (DECISIONS R1–R4 record the judgment calls). Labelled as agent review; same-model limitation stated.
 
 **What this evidence cannot show:** student learning outcomes; real integrity-incident rates; results with future models or determined students using them; validation against human scoring (a human second scorer is the planned upgrade, protocol ready); whether the workshop "works" until it is delivered with real participants (exit form ready in `evaluation/human-protocol/`).
 
@@ -84,5 +84,5 @@ This kit was authored with AI assistance (drafting, editing, pipeline code), the
 
 - Learning content (prose, rubrics, briefs, workshop): **CC BY 4.0** — [LICENSE](LICENSE).
 - Code (decision tool, slides styling, pipelines, tests): **MIT** — [LICENSE-CODE](LICENSE-CODE).
-- Third-party sources are cited with access dates in [research/literature-notes.md](research/literature-notes.md) and [ATTRIBUTION.md](ATTRIBUTION.md).
+- Third-party sources are cited with access dates in [research/literature-notes.md](docs/research/literature-notes.md) and [ATTRIBUTION.md](ATTRIBUTION.md).
 - AIAS level names © Perkins, Furze, Roe & MacVaugh (CC BY 4.0, aiassessmentscale.com); the two-lane framing is University of Sydney's (Teaching@Sydney). Both used with attribution under their licences.

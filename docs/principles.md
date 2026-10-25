@@ -5,7 +5,7 @@ nav_order: 2
 
 # Six design principles
 
-These principles drive every redesign in this kit. Each one states the principle, the reasoning behind it, and what it means in practice. Evidence trails lead to the [literature notes](https://github.com/iwyusdaz/ai-resilient-assessment-kit/blob/main/research/literature-notes.md).
+These principles drive every redesign in this kit. Each one states the principle, the reasoning behind it, and what it means in practice. Evidence trails lead to the [literature notes](research/literature-notes.html).
 
 ## 1. Decide what you are assessing before you decide about AI
 

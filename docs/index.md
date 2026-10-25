@@ -33,7 +33,7 @@ Most AI-era assessment guidance is generic ("use more orals!", "ban AI"). It doe
 
 - **If you teach:** start with [principles](principles.html), then read the case closest to your own course, then try the [decision tool](decision-tool/index.html) on your own assignment.
 - **If you run faculty development:** take the [workshop](workshop/facilitator-guide.html) as-is — guide, slides, canvas, handout and survey are all included.
-- **If you want the evidence trail:** [research/literature-notes.md](https://github.com/iwyusdaz/ai-resilient-assessment-kit/blob/main/research/literature-notes.md), [research/stress-test-protocol.md](https://github.com/iwyusdaz/ai-resilient-assessment-kit/blob/main/research/stress-test-protocol.md) and [evaluation/METHODS.md](https://github.com/iwyusdaz/ai-resilient-assessment-kit/blob/main/evaluation/METHODS.md).
+- **If you want the evidence trail:** the [literature notes](research/literature-notes.html) and the [stress-test protocol](research/stress-test-protocol.html) (now browsable on this site under Research), and [evaluation/METHODS.md](https://github.com/iwyusdaz/ai-resilient-assessment-kit/blob/main/evaluation/METHODS.md).
 
 ## What's honest about this build
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Stress-test pipeline — PENDING (requires API keys in .env).
 //
-// What it does on a real run (research/stress-test-protocol.md is the method of record):
+// What it does on a real run (docs/research/stress-test-protocol.md is the method of record):
 //   Phase 1  GENERATE  each case's original brief (or the redesigned brief with
 //            --redesign) is given to MODEL_A and MODEL_B under three prompt
 //            strategies (naive / moderate / determined). Wall-clock seconds,
@@ -258,7 +258,7 @@ async function runReal() {
 
   // Phase 4 - summary
   writeSummary({ t0, judgments, outputs, keyToSubmission });
-  console.log(`[Stress test] done (${MODE}). Raw outputs + judgments in research/results/stress-test${redesign ? "-redesign" : ""}/. Summary: summary.md. Method: AI stress test (blind judge panel) - see research/stress-test-protocol.md.`);
+  console.log(`[Stress test] done (${MODE}). Raw outputs + judgments in research/results/stress-test${redesign ? "-redesign" : ""}/. Summary: summary.md. Method: AI stress test (blind judge panel) - see docs/research/stress-test-protocol.md.`);
 }
 
 function writeSummary({ t0, judgments, outputs, keyToSubmission }) {
@@ -267,7 +267,7 @@ function writeSummary({ t0, judgments, outputs, keyToSubmission }) {
   lines.push("");
   lines.push(`Run started: ${t0} · Completed: ${new Date().toISOString()}`);
   lines.push("");
-  lines.push(`Method: **AI stress test (blind judge panel)** per research/stress-test-protocol.md. Outputs: MODEL_A + MODEL_B under naive/moderate/determined strategies. Judges: MODEL_A's outputs judged by MODEL_B+MODEL_C, MODEL_B's by MODEL_A+MODEL_C - no model judges its own output. This is an AI-measured result, not human scoring, and not validated against human scorers.`);
+  lines.push(`Method: **AI stress test (blind judge panel)** per docs/research/stress-test-protocol.md. Outputs: MODEL_A + MODEL_B under naive/moderate/determined strategies. Judges: MODEL_A's outputs judged by MODEL_B+MODEL_C, MODEL_B's by MODEL_A+MODEL_C - no model judges its own output. This is an AI-measured result, not human scoring, and not validated against human scorers.`);
   lines.push("");
   const models = [...new Set(outputs.map((o) => o.rec.model_name))];
   lines.push(`Models (as configured): generations: ${models.join(", ")}; judges: same slots in cross-assignment.`);

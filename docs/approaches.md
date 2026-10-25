@@ -5,7 +5,7 @@ nav_order: 3
 
 # Eight approaches compared
 
-A working comparison of eight redesign moves for AI-era assessment. Ratings are our evidence-based judgments for **first- and second-year undergraduate courses** (the kit's scope), not a systematic review. Where a rating is arguable, the "evidence base" column says so — and the [literature notes](https://github.com/iwyusdaz/ai-resilient-assessment-kit/blob/main/research/literature-notes.md) show what was checked.
+A working comparison of eight redesign moves for AI-era assessment. Ratings are our evidence-based judgments for **first- and second-year undergraduate courses** (the kit's scope), not a systematic review. Where a rating is arguable, the "evidence base" column says so — and the [literature notes](research/literature-notes.html) show what was checked.
 
 **Evidence-base key:** **strong** = multiple independent studies or institutional adoption; **emerging** = single-site studies or documented pilots; **anecdotal** = practitioner reports and reasoned argument only.
 

@@ -128,10 +128,12 @@ function walk(dir, exts, out = []) {
 
 const mdFiles = [
   ...walk(path.join(repoRoot, "docs"), [".md"]),
-  ...walk(path.join(repoRoot, "research"), [".md"]),
   ...walk(path.join(repoRoot, "evaluation"), [".md"]),
   path.join(repoRoot, "README.md")
 ];
+// Note: the research markdown lives under docs/research/ since 2026-10-26 so it
+// is part of the browsable Pages site; docs/ walk above covers it. research/
+// holds only the pipeline scripts now.
 const htmlFiles = walk(path.join(repoRoot, "docs"), [".html"]);
 
 for (const file of mdFiles) {

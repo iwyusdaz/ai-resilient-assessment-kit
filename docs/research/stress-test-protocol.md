@@ -1,6 +1,6 @@
 ---
 title: Stress-test protocol
-nav_order: 13
+nav_order: 2
 parent: Research
 has_toc: false
 ---
@@ -18,9 +18,9 @@ How this kit tests an assignment against generative AI **before** redesigning it
 
 Each case starts with a realistic first- or second-year brief and its original rubric:
 
-- [Case A — argumentative essay](../docs/case-a-essay/original.html)
-- [Case B — take-home problem set](../docs/case-b-problem-set/original.html)
-- [Case C — lab-style research report](../docs/case-c-research-report/original.html)
+- [Case A — argumentative essay](../case-a-essay/original.html)
+- [Case B — take-home problem set](../case-b-problem-set/original.html)
+- [Case C — lab-style research report](../case-c-research-report/original.html)
 
 ## Step 2 — Generate outputs
 
@@ -67,5 +67,5 @@ npm run eval:stress-test-redesign   # re-test on the redesigned tasks
 ## Known limitations
 
 - Results apply to the exact models, prompts and date of the run; AI capabilities change quickly. The method is reusable; the numbers are not portable.
-- Two judges cannot establish reliable scoring on their own; a human colleague scoring the same outputs is the planned upgrade (see [evaluation/METHODS](../evaluation/METHODS.html)).
+- Two judges cannot establish reliable scoring on their own; a human colleague scoring the same outputs is the planned upgrade (see [evaluation/METHODS](https://github.com/iwyusdaz/ai-resilient-assessment-kit/blob/main/evaluation/METHODS.md)).
 - Scoring is against our rubrics only; other rubrics might produce different vulnerability patterns.
