@@ -43,6 +43,7 @@ footer_content: >-
   Content licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
   Code licensed <a href="https://opensource.org/license/mit">MIT</a> ·
   Case study context: Lakeside State University is fictional.
+  <script>document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll(".table-wrapper, pre").forEach(function(el){if(el.scrollWidth>el.clientWidth+1){el.tabIndex=0;}});});</script>
 
 back_to_top: true
 back_to_top_text: "Back to top"
