@@ -11,3 +11,7 @@ node_modules/
 
 # Dry-run pipeline output (stub results, never used as results)
 dry-run/
+
+# Local tool output (linkcheck/audit artifacts are recorded in STATUS.md instead)
+linkcheck-results/
+axe-results/
