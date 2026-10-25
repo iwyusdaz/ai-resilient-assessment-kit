@@ -1,0 +1,136 @@
+{
+  "title": "Which approach fits my assessment?",
+  "intro": "Six questions. No answers leave this page — nothing is stored or sent anywhere. You will get two to three recommended approaches with the reasoning.",
+  "questions": [
+    {
+      "id": "purpose",
+      "legend": "1. What is this assessment mainly for?",
+      "hint": "Pick the primary purpose; the other one can be secondary.",
+      "options": [
+        { "value": "learning", "label": "Helping students learn (practice, feedback while they still can improve)" },
+        { "value": "assurance", "label": "Certifying what each student achieved (a grade that stands on its own)" },
+        { "value": "both", "label": "Both, roughly equally" }
+      ]
+    },
+    {
+      "id": "evidence",
+      "legend": "2. What must the grade be evidence of?",
+      "hint": "Think about what a passing grade claims the student can do.",
+      "options": [
+        { "value": "product", "label": "A final product (essay, report, problem set)" },
+        { "value": "process", "label": "The process and decisions behind the work (how they got there)" },
+        { "value": "live-skill", "label": "A live skill — thinking, solving or defending in real time" },
+        { "value": "ai-collab", "label": "Working well with AI tools (using, checking, critiquing them)" }
+      ]
+    },
+    {
+      "id": "size",
+      "legend": "3. How many students?",
+      "hint": "Rough numbers are fine.",
+      "options": [
+        { "value": "small", "label": "Under 50" },
+        { "value": "medium", "label": "50–150" },
+        { "value": "large", "label": "More than 150" }
+      ]
+    },
+    {
+      "id": "time",
+      "legend": "4. When can assessment activity happen?",
+      "hint": "What your timetable and rooms realistically allow.",
+      "options": [
+        { "value": "inclass", "label": "I have regular class/tutorial time" },
+        { "value": "takehome", "label": "Take-home only — no reliable class time" },
+        { "value": "mix", "label": "Some class time exists, plus take-home" }
+      ]
+    },
+    {
+      "id": "aigoal",
+      "legend": "5. Is skillful AI use itself part of what students should learn?",
+      "hint": "Not whether AI is allowed — whether using it well is a course outcome.",
+      "options": [
+        { "value": "yes", "label": "Yes, explicitly" },
+        { "value": "partly", "label": "Partly — worth practising, not worth grading on its own" },
+        { "value": "no", "label": "No — it is at best a tool, never the target" }
+      ]
+    },
+    {
+      "id": "support",
+      "legend": "6. What grading support do you have?",
+      "hint": "TAs, tutors or a grading team you can rely on.",
+      "options": [
+        { "value": "team", "label": "A grading team I can brief and calibrate" },
+        { "value": "solo", "label": "Mostly just me" },
+        { "value": "minimal", "label": "Very little — grading time is very tight" }
+      ]
+    }
+  ],
+  "approaches": {
+    "inclass-writing": {
+      "name": "In-class writing",
+      "desc": "Move writing into class time: short, unaided, low-stakes pieces.",
+      "links": [{ "label": "Approach details", "href": "../approaches.html#1-in-class-writing" }, { "label": "Case A uses staged submissions + a defence instead", "href": "../case-a-essay/redesign.html" }]
+    },
+    "oral-checks": {
+      "name": "Oral checks (viva-lite)",
+      "desc": "Short structured Q&A where students defend choices from their own work.",
+      "links": [{ "label": "Approach details", "href": "../approaches.html#2-oral-checks-viva-lite" }, { "label": "Case A's 5-minute defence", "href": "../case-a-essay/redesign.html" }, { "label": "Case C's structured Q&A", "href": "../case-c-research-report/redesign.html" }]
+    },
+    "staged-submissions": {
+      "name": "Staged submissions",
+      "desc": "Build the artefact in graded stages; grade the checkpoints cheaply.",
+      "links": [{ "label": "Approach details", "href": "../approaches.html#3-staged-submissions" }, { "label": "Case A full redesign", "href": "../case-a-essay/redesign.html" }]
+    },
+    "process-portfolio": {
+      "name": "Process portfolio",
+      "desc": "Grade drafts, logs and version history alongside the artefact.",
+      "links": [{ "label": "Approach details", "href": "../approaches.html#4-process-portfolios-drafts-logs-version-history" }, { "label": "Case C's lab notebook", "href": "../case-c-research-report/redesign.html" }]
+    },
+    "local-data": {
+      "name": "Personalized or local data",
+      "desc": "Run the task on data students collected or that belongs to this class.",
+      "links": [{ "label": "Approach details", "href": "../approaches.html#5-personalized-or-local-data" }, { "label": "Case B's class dataset", "href": "../case-b-problem-set/redesign.html" }, { "label": "Case C's team-collected data", "href": "../case-c-research-report/redesign.html" }]
+    },
+    "critique-ai": {
+      "name": "Critiquing AI output",
+      "desc": "Give students AI-produced work to find, fix and justify the errors.",
+      "links": [{ "label": "Approach details", "href": "../approaches.html#6-critiquing-ai-output" }, { "label": "Case B's find-and-fix items", "href": "../case-b-problem-set/redesign.html" }]
+    },
+    "open-ai-reflection": {
+      "name": "Open AI use with reflection",
+      "desc": "Allow full AI use; grade the log, the judgment and the reflection.",
+      "links": [{ "label": "Approach details", "href": "../approaches.html#7-open-ai-use-with-reflection" }, { "label": "Case B's open practice lane", "href": "../case-b-problem-set/redesign.html" }]
+    },
+    "secure-checks": {
+      "name": "Proctored/secure checks",
+      "desc": "Short supervised checks carrying the assurance weight; everything else stays open.",
+      "links": [{ "label": "Approach details", "href": "../approaches.html#8-proctoredsecure-checks" }, { "label": "Case B's weighted in-class checks", "href": "../case-b-problem-set/redesign.html" }]
+    }
+  },
+  "rules": [
+    { "approach": "open-ai-reflection", "weight": 3, "when": { "purpose": ["learning"], "aigoal": ["yes", "partly"] }, "why": "Practice-focused assessment where AI skill is a goal is exactly the open-lane case: let AI in, grade the judgment." },
+    { "approach": "open-ai-reflection", "weight": 2, "when": { "purpose": ["learning"] }, "why": "Even without an explicit AI outcome, practice work loses little to open AI use when the log is graded instead of the answers." },
+    { "approach": "open-ai-reflection", "weight": 2, "when": { "aigoal": ["yes"] }, "why": "You cannot teach AI judgment while banning AI; the reflection log makes the skill assessable." },
+    { "approach": "secure-checks", "weight": 3, "when": { "purpose": ["assurance"], "time": ["inclass", "mix"] }, "why": "Assurance claims need at least one condition the student does not fully control; regular class time makes short checks cheap." },
+    { "approach": "secure-checks", "weight": 2, "when": { "purpose": ["assurance"], "size": ["medium", "large"] }, "why": "At scale, short in-class checks beat individual orals on cost while carrying real weight." },
+    { "approach": "secure-checks", "weight": 1, "when": { "purpose": ["both"], "time": ["inclass", "mix"] }, "why": "A small secure component backs the certificate claim without policing everything." },
+    { "approach": "oral-checks", "weight": 3, "when": { "evidence": ["live-skill"] }, "why": "If the outcome is thinking or defending in real time, the evidence has to be real-time — a short structured oral is the direct measure." },
+    { "approach": "oral-checks", "weight": 2, "when": { "evidence": ["process"], "size": ["small", "medium"] }, "why": "With a manageable cohort, orals on the student's own process are the strongest single authorship check." },
+    { "approach": "oral-checks", "weight": 1, "when": { "support": ["team"] }, "why": "With a team you can brief, sampled orals stay affordable (see the faculty notes on sampling)." },
+    { "approach": "staged-submissions", "weight": 3, "when": { "evidence": ["process"], "time": ["takehome", "mix"] }, "why": "Stages produce traceable process evidence without needing class time." },
+    { "approach": "staged-submissions", "weight": 2, "when": { "purpose": ["assurance"], "evidence": ["product"] }, "why": "Even product-focused assurance improves when the artefact is built in checkpoints you can verify along the way." },
+    { "approach": "process-portfolio", "weight": 2, "when": { "evidence": ["process"] }, "why": "When the journey is the evidence, logs and drafts need to be part of the grade." },
+    { "approach": "process-portfolio", "weight": 1, "when": { "support": ["team", "solo"] }, "why": "Logs and reflections grade fast with a checklist rubric." },
+    { "approach": "local-data", "weight": 3, "when": { "evidence": ["product"], "aigoal": ["no", "partly"] }, "why": "Generic AI output cannot match data your students collected; local data rebuilds the validity of a product task." },
+    { "approach": "local-data", "weight": 1, "when": { "purpose": ["learning"] }, "why": "Collectable data also improves engagement — but its main job here is validity." },
+    { "approach": "critique-ai", "weight": 3, "when": { "aigoal": ["yes"] }, "why": "Critiquing AI work both teaches and measures the evaluation skill directly." },
+    { "approach": "critique-ai", "weight": 2, "when": { "aigoal": ["partly"] }, "why": "Find-and-fix items add evaluation practice with low grading cost." },
+    { "approach": "critique-ai", "weight": 1, "when": { "support": ["minimal"] }, "why": "One AI artefact serves a whole cohort, so critique items are among the cheapest to mark." },
+    { "approach": "inclass-writing", "weight": 2, "when": { "purpose": ["assurance"], "time": ["inclass"], "size": ["small"] }, "why": "With a small cohort and weekly class time, in-class writing gives a strong product-to-student link — watch the equity notes (typing speed, accommodations)." },
+    { "approach": "inclass-writing", "weight": -2, "when": { "time": ["takehome"] }, "why": "In-class writing requires the class time you said you do not have." },
+    { "approach": "inclass-writing", "weight": -1, "when": { "size": ["large"] }, "why": "At large scale, timed in-class writing amplifies accommodation logistics; short secure checks are cheaper." }
+  ],
+  "alwaysAdd": {
+    "approach": "open-ai-reflection",
+    "note": "Considered regardless of answers: an explicit AI-use level per stage (see the AIAS levels page) is worth adopting whatever else you choose."
+  }
+}
