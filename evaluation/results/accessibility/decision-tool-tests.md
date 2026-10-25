@@ -1,7 +1,7 @@
 # Decision tool — scripted task tests
 
-Target: http://127.0.0.1:49406/decision-tool/index.html
-Date: 2026-10-25T23:43:05.794Z
+Target: https://iwyusdaz.github.io/ai-resilient-assessment-kit/decision-tool/index.html
+Date: 2026-10-25T23:47:12.168Z
 
 | # | Check | Result |
 |---|---|---|

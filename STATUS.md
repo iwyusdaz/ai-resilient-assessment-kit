@@ -29,6 +29,22 @@ Last updated: **2026-10-26** (revision round 1 applied — see docs/evaluation/r
 | Social preview image | Generated at `docs/assets/social-preview.png` (1280×640); **uploading via Settings → General is an owner task** (no API) |
 | Pipeline guardrails | Verified: placeholder `.env` → exit 1, zero network; `--dry-run` → stubs labelled "DRY RUN – NOT REAL RESULTS" |
 
+## Verification log (2026-10-26) — post-publish, after the revision round
+
+| Check | Command | Result |
+|---|---|---|
+| Pages build | `gh api .../pages/builds/latest` | built for commit `846d379`, no error |
+| Decision tool tests (live) | `node evaluation/tests/decision-tool-tests.mjs https://iwyusdaz.github.io/ai-resilient-assessment-kit/decision-tool/index.html` | **28/28 PASS** (incl. focus-stays-put on recompute, assurance+take-home secure check, ai-collab rules, low-confidence warning) |
+| Exhaustive tool logic | scripted replication of tool.js scoring over all 972 combinations | 0 assurance combinations without a secure check (was 50); 0 empty results; 24 low-confidence (top score ≤ 2) |
+| Previously-broken combos driven live | Playwright against the live tool | assurance+take-home × 2 → "Proctored/secure checks" first card with the principle-4 rationale; weak combo → low-confidence warning renders |
+| Live content spot-checks | curl + text match on all three faculty-notes pages + facilitator guide | new reconciled numbers present; old broken numbers ("12–14 min", "≈ 90–100 h", "About half", "roughly a quarter", "halves it") absent |
+| Sidebar nav (live) | curl of homepage nav | 33 entries incl. **Decision tool** (top level), **Workshop slides** (under the guide), **Research** (+ 2 children); research pages return 200 (were 404) |
+| axe (live) | `node tooling/audit-axe.mjs <tool, slides, research × 2, case-c faculty notes>` | **0 violations** on all five (1 incomplete on markdown-heavy pages, typical for scrollable wrappers) |
+| Live linkcheck | `node tooling/linkcheck.mjs <live> --max 400` | **38 pages, 0 broken links** (was 34 — the research layer is now on the site) |
+| Mechanical agenda check | `node evaluation/run-simulated-participants.mjs --dry-run` | PASS — segments tile 0–90 |
+| Secrets | `gitleaks detect` | no leaks found |
+| Local suite re-run | `npm run test:md-links` | 163 internal links across 43 files, all resolve |
+
 ## Verification log (2026-10-25)
 
 | Check | Command | Result |
