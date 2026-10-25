@@ -1,7 +1,7 @@
 # Decision tool — scripted task tests
 
-Target: https://iwyusdaz.github.io/ai-resilient-assessment-kit/decision-tool/index.html
-Date: 2026-10-25T19:26:30.168Z
+Target: http://127.0.0.1:49406/decision-tool/index.html
+Date: 2026-10-25T23:43:05.794Z
 
 | # | Check | Result |
 |---|---|---|
@@ -25,5 +25,13 @@ Date: 2026-10-25T19:26:30.168Z
 | 18 | T10: usable at 256px (beyond 400% on 1024 base) | PASS — scrollWidth=256 |
 | 19 | T10: submit button tappable at 256px | PASS |
 | 20 | T11: no data sent anywhere while using the tool | PASS — 0 non-local requests |
+| 21 | T12: re-answer keeps focus on the changed question | PASS — activeElement=purpose-1 |
+| 22 | T12: recompute announced via live region | PASS — Results updated: still 3 recommended approaches shown below. |
+| 23 | T13: assurance + take-home recommends a secure check | PASS — Proctored/secure checks | Personalized or local data | Staged submissions |
+| 24 | T14: ai-collab evidence surfaces open AI + reflection | PASS — Open AI use with reflection | Critiquing AI output | Process portfolio |
+| 25 | T14: ai-collab evidence surfaces critique-the-AI | PASS |
+| 26 | T14: ai-collab rationale present in why-box | PASS |
+| 27 | T15: low-confidence warning renders | PASS |
+| 28 | T15: low-confidence announced via live region | PASS — Results ready: 3 recommended approaches shown below. Low confidence —  |
 
-**20/20 passed.**
+**28/28 passed.**

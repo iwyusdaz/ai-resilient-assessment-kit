@@ -22,4 +22,11 @@ All notable changes to this kit. Format loosely follows Keep a Changelog; versio
 - Social preview upload: image generated; uploading via the Settings UI is an owner task (no API).
 
 ## Unreleased
-- (nothing yet — changes from reviews will be logged in docs/evaluation/revisions.md and summarised here per minor version)
+
+### Changed — 2026-10-26 (revisions from the agent review)
+- Grading-time arithmetic reconciled in all three faculty-notes pages: headlines now equal the sum of their own rows (Case A ~14–16 min/student with the defence-sampling amortisation stated; Case B ≈68 h vs ≈210–250 h — "roughly 30%", was "about half"; Case C 13.5–14.5 min/student, Q&A aligned at 2 min/student for a 10-minute team session). Downstream repetitions (slide 8, pushback table) updated.
+- Case B practice lane standardized at 10% total (was 15% in two files); each faculty-notes page states where the course-grade budget comes from; Case A's redesign declares the course AI-literacy outcome behind rubric criterion 4.
+- Decision tool: assurance + take-home combinations now recommend a secure check (verified over all 972 answer combinations), "working well with AI tools" evidence has dedicated rules, the unreachable empty state is replaced by a low-confidence warning (top score ≤ 2), and focus moves to the results heading on first reveal only. Scripted tests extended 20 → 28.
+- Workshop retimed to fit its slots: sprint 4/4/6/8/4 (+2 min buffer, canvas retitled "the 26-minute sprint"), post-survey in parallel with commitments with a six-pair go-around cap, 25–40 script rewritten to match the deck, gut-score skim made explicit, gallery walk capped at 2 canvases × 4 min, group size stated (12–30).
+- Research markdown moved under `docs/research/` (browsable on the site; a Research page joins the nav); the decision tool and workshop slides join the sidebar nav.
+- Pre-survey is calendar-invite only (~5 min; was "minutes 0–2").

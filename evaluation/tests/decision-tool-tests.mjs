@@ -34,6 +34,12 @@ async function answerAll(page) {
   }
 }
 
+async function answerValues(page, values) {
+  for (const [qid, val] of Object.entries(values)) {
+    await page.locator(`input[name="${qid}"][value="${val}"]`).check();
+  }
+}
+
 const server = liveUrl
   ? null
   : http.createServer((req, res) => {
@@ -142,6 +148,54 @@ try {
   await answerAll(page3);
   await page3.waitForSelector("#results:not([hidden])");
   check("T11: no data sent anywhere while using the tool", extraRequests === 0, `${extraRequests} non-local requests`);
+
+  // T12 recomputes after results are shown must NOT yank focus to the
+  // results heading — focus stays with the radio just operated, and the
+  // live region announces the update instead.
+  const page4 = await ctx.newPage();
+  await page4.goto(target, { waitUntil: "networkidle" });
+  await answerValues(page4, { purpose: "learning", evidence: "product", size: "small", time: "inclass", aigoal: "yes", support: "team" });
+  await page4.waitForSelector("#results:not([hidden])");
+  await page4.locator(`input[name="purpose"][value="assurance"]`).check();
+  await page4.waitForFunction(() => (document.getElementById("status")?.textContent || "").includes("updated"));
+  const recomputeFocus = await page4.evaluate(() => {
+    const el = document.activeElement;
+    return { type: el?.type, name: el?.name, id: el?.id, tag: el?.tagName };
+  });
+  check("T12: re-answer keeps focus on the changed question", recomputeFocus?.type === "radio" && recomputeFocus?.name === "purpose", `activeElement=${recomputeFocus?.id || recomputeFocus?.tag}`);
+  const st4 = await page4.locator("#status").textContent();
+  check("T12: recompute announced via live region", (st4 || "").toLowerCase().includes("updated"), st4?.slice(0, 60));
+
+  // T13 assurance + take-home-only + small cohort: the combination class that
+  // previously produced no secure check (principle-4 hole) must now recommend one.
+  const page5 = await ctx.newPage();
+  await page5.goto(target, { waitUntil: "networkidle" });
+  await answerValues(page5, { purpose: "assurance", evidence: "product", size: "small", time: "takehome", aigoal: "no", support: "minimal" });
+  await page5.waitForSelector("#results:not([hidden])");
+  const cards5 = await page5.locator(".card h3").allTextContents();
+  check("T13: assurance + take-home recommends a secure check", cards5.some((t) => t.toLowerCase().includes("secure")), cards5.join(" | "));
+
+  // T14 evidence = "working well with AI tools" must key to dedicated rules
+  // (previously no rule fired on it, producing the weakest results).
+  const page6 = await ctx.newPage();
+  await page6.goto(target, { waitUntil: "networkidle" });
+  await answerValues(page6, { purpose: "learning", evidence: "ai-collab", size: "small", time: "inclass", aigoal: "partly", support: "solo" });
+  await page6.waitForSelector("#results:not([hidden])");
+  const cards6 = await page6.locator(".card h3").allTextContents();
+  check("T14: ai-collab evidence surfaces open AI + reflection", cards6.some((t) => t.includes("Open AI use with reflection")), cards6.join(" | "));
+  check("T14: ai-collab evidence surfaces critique-the-AI", cards6.some((t) => t.includes("Critiquing AI output")));
+  const whys6 = await page6.locator(".card .why").allTextContents();
+  check("T14: ai-collab rationale present in why-box", whys6.join(" ").includes("capability being graded"));
+
+  // T15 low-confidence warning: the weakest class of answers (top score <= 2,
+  // verified exhaustively over all 972 combinations) must say so.
+  const page7 = await ctx.newPage();
+  await page7.goto(target, { waitUntil: "networkidle" });
+  await answerValues(page7, { purpose: "learning", evidence: "process", size: "small", time: "inclass", aigoal: "no", support: "minimal" });
+  await page7.waitForSelector("#results:not([hidden])");
+  check("T15: low-confidence warning renders", (await page7.locator("#results-list .warn").count()) === 1);
+  const st7 = await page7.locator("#status").textContent();
+  check("T15: low-confidence announced via live region", (st7 || "").toLowerCase().includes("low confidence"), st7?.slice(0, 70));
 
   await ctx.close();
 } finally {

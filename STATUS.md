@@ -1,27 +1,27 @@
 # STATUS — ai-resilient-assessment-kit
 
-Last updated: **2026-10-25** (v1.0.0 build complete)
+Last updated: **2026-10-26** (revision round 1 applied — see docs/evaluation/revisions.md)
 
 ## Current state
 
 | Item | Status |
 |---|---|
-| Repository | github.com/iwyusdaz/ai-resilient-assessment-kit (published 2026-10-25) |
+| Repository | github.com/iwyusdaz/ai-resilient-assessment-kit (published 2026-10-25; revision round 2026-10-26) |
 | Live site | https://iwyusdaz.github.io/ai-resilient-assessment-kit/ (Pages from main `/docs`, Just the Docs v0.12.0 pinned) |
-| Research layer (verified literature notes + stress-test protocol) | Complete |
+| Research layer (verified literature notes + stress-test protocol) | Complete — browsable on the site under `docs/research/` (moved 2026-10-26; pipeline scripts remain in `research/`) |
 | Core pages (principles, eight approaches, AI-use levels w/ verified AIAS 2.1 names) | Complete |
-| Case A (essay) — 6 files | Complete (scores PENDING) |
-| Case B (problem set) — 6 files | Complete (scores PENDING) |
-| Case C (research report) — 6 files | Complete (scores PENDING) |
+| Case A (essay) — 6 files | Complete (scores PENDING); grading-time arithmetic reconciled 2026-10-26 (rows sum to the headline) |
+| Case B (problem set) — 6 files | Complete (scores PENDING); practice lane standardized at 10% total + gradebook budget stated 2026-10-26 |
+| Case C (research report) — 6 files | Complete (scores PENDING); 38→30% weight structure adopted in brief + redesign; Q&A aligned at 2 min/student 2026-10-26 |
 | Stress-test score tables | **PENDING — requires API key** (`research/run-stress-test.mjs`; dry-run tested; blind cross-model judging per DECISIONS.md D3) |
 | Re-test on redesigns | **PENDING — requires API key** (`--redesign` mode; protocol step 5) |
-| Decision tool | Complete, axe-clean (0 violations), 20/20 scripted tests (keyboard, focus, live region, 320px/256px reflow, zero data sent) |
-| Workshop package (guide, 13 HTML slides, canvas, handout, pre/post survey) | Complete — **agenda timing not yet validated by delivery** (mechanical arithmetic check passes; simulated-participant pipeline pending) |
+| Decision tool | Complete, axe-clean (0 violations), **28/28 scripted tests** (keyboard, first-reveal focus + no focus yank on recompute, live region, low-confidence warning, 320px/256px reflow, zero data sent); logic verified over all 972 answer combinations (0 assurance combos without a secure check); in the sidebar nav since 2026-10-26 |
+| Workshop package (guide, 13 HTML slides, canvas, handout, pre/post survey) | Complete — retimed 2026-10-26 so segment steps fit their slots (sprint 4/4/6/8/4 + buffer; parallel post-survey; gallery-walk rotation cap; group size stated); **agenda timing not yet validated by delivery** (mechanical arithmetic check passes; simulated-participant pipeline pending); slides in the sidebar nav since 2026-10-26 |
 | Templates (syllabus + assignment AI statements, blank canvas) | Complete |
 | axe audit (decision tool + slides, local) | Done — 0 violations (full-site audit re-run against live Pages build after publish) |
-| Internal link integrity | Done — 137 internal links + fragments resolve |
-| Playwright scripted tests | Done — 20/20 (see evaluation/results/accessibility/decision-tool-tests.md) |
-| Agent review (fresh-context reviewer agent, structured form) | Scheduled post-build — labelled "Agent review", never "educator review"; same-model limitation stated |
+| Internal link integrity | Done — 163 internal links + fragments across 43 files resolve (research pages now inside docs/) |
+| Playwright scripted tests | Done — 28/28 (see evaluation/results/accessibility/decision-tool-tests.md) |
+| Agent review (fresh-context reviewer agent, structured form) | **Run 2026-10-26** — full review in `evaluation/agent-review.md` (labelled "Agent review", never "educator review"; same-model limitation stated); dispositions in docs/evaluation/revisions.md; changes applied this round |
 | Multi-model review panel | **PENDING — requires API key** (`evaluation/run-review-panel.mjs`; dry-run tested) |
 | AI-simulated workshop participants | **PENDING — requires API key** (`evaluation/run-simulated-participants.mjs`; dry-run tested; mechanical agenda check passes) |
 | Educator review (≥ 3 human educators) | Not run — form, invitation and consent text ready in `evaluation/human-protocol/` + `docs/evaluation/educator-review.md` |
@@ -59,5 +59,5 @@ Last updated: **2026-10-25** (v1.0.0 build complete)
 1. **All stress-test numbers pending** — case pages show labelled reasoning, not results, until the API run.
 2. **No human participants in anything yet** — no educator review, no workshop delivery, no real screen-reader pass. All protocols ready.
 3. **Same-model limitation** — agent review may share the author's underlying model; stated wherever agent review is mentioned.
-4. **Workshop timings are estimates** — validated only arithmetically; the simulated-participants pipeline (pending) is designed to stress them; real delivery is the owner's optional step.
+4. **Workshop timings are estimates** — validated arithmetically and against the agent review's segment-by-segment timing walkthrough (2026-10-26, which found two overflowing segments; both rebalanced); the simulated-participants pipeline (pending) is designed to stress them; real delivery is the owner's optional step.
 5. ~~Live-site axe audit + linkcheck re-run~~ — **done 2026-10-25**: all 30 pages 0 critical/serious (after the two live-build fixes above); 34-page crawl, 0 broken links; decision-tool suite 20/20 against the live build.

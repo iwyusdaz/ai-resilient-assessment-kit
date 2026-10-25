@@ -133,6 +133,15 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
   margin: 1rem 0;
 }
 
+.warn {
+  border: 2px solid var(--focus);
+  background: #fff7ec;
+  color: #6b4100;        /* 7.0:1 on the #fff7ec background */
+  font-weight: 700;
+  padding: 0.6rem 0.8rem;
+  margin: 1rem 0;
+}
+
 .skip-link {
   position: absolute;
   left: -9999px;

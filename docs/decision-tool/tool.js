@@ -3,11 +3,15 @@
    Accessibility contract:
    - every question is a <fieldset> with a <legend>;
    - radio inputs are the only interaction; keyboard-first;
-   - results are announced via a polite live region AND focus is moved to
-     the results heading (tabindex="-1");
+   - on the FIRST results reveal, focus moves to the results heading
+     (tabindex="-1"); on recomputes (an answer changed after results are
+     visible) focus stays where the user is and the polite live region
+     announces the update instead;
    - Back removes the most recent answer and returns focus to it;
    - Start over resets and returns focus to the first question;
    - unanswered questions on submit: focus moves to the first one;
+   - results carry a low-confidence warning when the top-ranked approach
+     scores <= 2 (the answers point in different directions);
    - no network calls except the initial questions.json fetch; nothing stored. */
 (function () {
   "use strict";
@@ -23,6 +27,7 @@
 
   var data = null;
   var answerOrder = []; // question ids in answer order
+  var resultsShown = false; // focus moves to the heading on the first reveal only
 
   fetch("questions.json")
     .then(function (res) { return res.json(); })
@@ -99,11 +104,20 @@
       .filter(function (a) { return scores[a] > 0; })
       .sort(function (a, b) { return scores[b] - scores[a]; })
       .slice(0, 3);
+    var lowConfidence = ranked.length > 0 && scores[ranked[0]] <= 2;
 
     resultsList.innerHTML = "";
     if (!ranked.length) {
-      resultsList.innerHTML = "<p class=\"error-msg\">No recommendation fired for this combination. That usually means the answers point in different directions — the honest next step is reading the <a href=\"../approaches.html\">full comparison</a> and the <a href=\"../principles.html\">principles</a>, then talking it through with a colleague.</p>";
+      // Defensive only: with the current rule set every one of the 972
+      // answer combinations produces at least one recommendation.
+      resultsList.innerHTML = "<p class=\"error-msg\">No recommendation fired for this combination — that is unexpected. The honest next step is reading the <a href=\"../approaches.html\">full comparison</a> and the <a href=\"../principles.html\">principles</a>, then talking it through with a colleague.</p>";
     } else {
+      if (lowConfidence) {
+        var warn = document.createElement("p");
+        warn.className = "warn";
+        warn.textContent = "Low confidence: these answers point in different directions, and no approach matches them strongly. Treat the cards below as starting points to argue with — and lean on the reasoning, not the ranking.";
+        resultsList.appendChild(warn);
+      }
       ranked.forEach(function (key) {
         var a = data.approaches[key];
         var card = document.createElement("article");
@@ -146,9 +160,16 @@
     }
 
     resultsSection.hidden = false;
-    // Announce via live region, then move focus to the results heading.
-    status.textContent = "Results ready: " + (ranked.length ? ranked.length : 0) + " recommended approaches shown below.";
-    resultsHeading.focus();
+    // First reveal: move focus to the results heading. Recomputes (an answer
+    // changed while results are visible): focus stays with the control the
+    // user just operated, and the live region announces the update.
+    if (!resultsShown) {
+      resultsShown = true;
+      status.textContent = "Results ready: " + ranked.length + " recommended approach" + (ranked.length === 1 ? "" : "es") + " shown below." + (lowConfidence ? " Low confidence — see the warning above the cards." : "");
+      resultsHeading.focus();
+    } else {
+      status.textContent = "Results updated: still " + ranked.length + " recommended approach" + (ranked.length === 1 ? "" : "es") + " shown below." + (lowConfidence ? " Low confidence — see the warning above the cards." : "");
+    }
     btnRestart.disabled = false;
   }
 
@@ -163,7 +184,6 @@
       err.className = "error-msg";
       err.id = "tool-error";
       err.setAttribute("role", "alert");
-      var remaining = data.questions.length - (data.questions.length - missing.length);
       err.textContent = "Please answer " + missing.length + " more question" + (missing.length > 1 ? "s" : "") + ". The first one is now in view.";
       form.parentNode.insertBefore(err, form);
       var first = document.getElementById("fs-" + missing[0].id);
@@ -179,6 +199,7 @@
   btnBack.addEventListener("click", function () {
     if (!answerOrder.length) return;
     resultsSection.hidden = true;
+    resultsShown = false; // a fresh full run should re-focus the heading
     var last = answerOrder.pop();
     var checked = form.querySelector("input[name=\"" + last + "\"]:checked");
     if (checked) checked.checked = false;
@@ -194,6 +215,7 @@
     answerOrder = [];
     resultsSection.hidden = true;
     resultsList.innerHTML = "";
+    resultsShown = false;
     clearError();
     updateControls();
     var firstRadio = form.querySelector("input[type=\"radio\"]");
