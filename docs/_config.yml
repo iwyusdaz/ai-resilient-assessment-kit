@@ -1,0 +1,54 @@
+# Site configuration — AI-Resilient Assessment Kit
+# Built with Jekyll + Just the Docs on GitHub Pages (deployed from /docs on main).
+# The config lives inside docs/ because that is what Pages reads for a /docs source.
+
+title: AI-Resilient Assessment Kit
+description: >-
+  Three common university assignments stress-tested against generative AI and
+  redesigned with explicit AI-use levels, process evidence and new rubrics —
+  with a decision tool and a ready-to-run 90-minute faculty workshop.
+  Built around a fictional case study at Lakeside State University, a fictional
+  US public university preparing for ADA Title II digital accessibility compliance.
+
+url: "https://iwyusdaz.github.io"
+baseurl: "/ai-resilient-assessment-kit"
+
+repository: iwyusdaz/ai-resilient-assessment-kit
+
+# Pin the theme to a stable release tag (verified 2026-10-25 via the GitHub
+# releases API: latest stable release v0.12.0, published 2026-01-23).
+remote_theme: just-the-docs/just-the-docs@v0.12.0
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+
+# Just the Docs settings
+color_scheme: light
+search_enabled: true
+search:
+  heading_level: 2
+  previews: 2
+  preview_words_before: 3
+  preview_words_after: 3
+
+heading_anchors: true
+nav_sort: order
+
+aux_links:
+  "GitHub repository":
+    - "https://github.com/iwyusdaz/ai-resilient-assessment-kit"
+
+footer_content: >-
+  Content licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+  Code licensed <a href="https://opensource.org/license/mit">MIT</a> ·
+  Case study context: Lakeside State University is fictional.
+
+back_to_top: true
+back_to_top_text: "Back to top"
+
+# Keep generated files out of the output where they serve no purpose
+exclude:
+  - vendor
+  - Gemfile
+  - Gemfile.lock
