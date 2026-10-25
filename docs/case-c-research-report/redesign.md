@@ -90,4 +90,4 @@ The [new rubric](rubric.html) has 5 criteria × 4 levels: research design & owne
 - **Team free-riding is reduced (tagged notebook entries, individual Q&A), not eliminated.**
 - **Data quality.** Class-collected data is messy by nature; that's a feature for the notebook criterion and a cost everywhere else.
 - **Students who cannot collect data** use the provided-dataset fallback — a real but lesser version of the same assessment; the fallback's evidence is thinner, which the Q&A compensates for.
-- **A determined team could still fabricate a notebook.** The Q&A + twist registration + spot-checks raise the cost substantially; no design eliminates determined fraud (see the [stress-test limits](stress-test.html#what-we-did-not-conclude)).
+- **A determined team could still fabricate a notebook.** The Q&A + twist registration + spot-checks raise the cost substantially; no design eliminates determined fraud (see the [stress-test limits](stress-test.html#vulnerability-analysis-design-reasoning-not-measured-results)).

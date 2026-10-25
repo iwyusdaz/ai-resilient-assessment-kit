@@ -78,4 +78,4 @@ The rules are about **learning, not policing**: the level for each stage is set 
 
 ## Choosing levels with the decision tool
 
-If you are redesigning your own assessment, the [decision tool](decision-tool/index.html) recommends approaches and suggests starting levels per stage. The blank [redesign canvas](templates/redesign-canvas.html) has a column for the level of every stage.
+If you are redesigning your own assessment, the [decision tool](decision-tool/index.html) recommends approaches and suggests starting levels per stage. The blank [redesign canvas](templates/redesign-canvas-blank.html) has a column for the level of every stage.

@@ -83,6 +83,6 @@ The [new rubric](rubric.html) has 5 criteria × 4 levels: argument construction,
 ## What this does NOT solve
 
 - **The open lane stays open.** A student could still have AI write their draft (stage 3 is completion-graded) — but the final essay must evolve from it coherently, and the defence checks authorship of the argument, not the draft.
-- **Determined fabrication of the whole trail.** A sufficiently determined student could fabricate annotations, a log and a rehearsed defence. Nothing fully prevents that; the design raises the cost far above the original's and produces checkpoint evidence (per the [honesty of limits](stress-test.html#what-we-did-not-conclude)), not certainty.
+- **Determined fabrication of the whole trail.** A sufficiently determined student could fabricate annotations, a log and a rehearsed defence. Nothing fully prevents that; the design raises the cost far above the original's and produces checkpoint evidence (per the [honesty of limits](stress-test.html#vulnerability-analysis-design-reasoning-not-measured-results)), not certainty.
 - **AI's fluency advantage.** The final essay can still *sound* excellent even when done with undisclosed AI help. That's why it now carries 15% instead of 25%, and why the defence and verification gate carry the assurance load.
 - **Model evolution.** Future tools may pass the verification gate (e.g., agents that actually retrieve and read sources). The re-test (`--redesign` mode) is the mechanism for finding out; see the pending section in the [stress test](stress-test.html#re-test-redesigned-task).
