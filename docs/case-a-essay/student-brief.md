@@ -48,9 +48,9 @@ You can be honest about *more* AI use, not less: an overstated disclosure costs 
 
 ## Quick checklist before you submit each stage
 
-- [ ] Did I check the AI level for this stage?
-- [ ] If AI level 2 or 3: is my disclosure paragraph written?
-- [ ] Stage 2 only: did I open and read every source myself?
-- [ ] Does every file have my name, my tutorial group and the stage number?
+- Did I check the AI level for this stage?
+- If AI level 2 or 3: is my disclosure paragraph written?
+- Stage 2 only: did I open and read every source myself?
+- Does every file have my name, my tutorial group and the stage number?
 
 Questions? Ask early. The whole point of the levels is that you never have to guess.

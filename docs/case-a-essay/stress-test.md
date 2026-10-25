@@ -33,7 +33,8 @@ Task: Write an argumentative essay of 1,500 words on the following question:
 Does social media use harm adolescent mental health?
 Take a clear position and defend it. Your essay must:
 - State a thesis in the introduction and sustain it throughout.
-- Use at least five scholarly sources (peer-reviewed journal articles or academic books), cited in APA 7 style.
+- Use at least five scholarly sources (peer-reviewed journal
+  articles or academic books), cited in APA 7 style.
 - Engage with at least one counter-argument.
 - Conclude with implications, not a summary.
 ```

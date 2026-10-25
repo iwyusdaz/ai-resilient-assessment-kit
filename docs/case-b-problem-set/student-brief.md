@@ -60,7 +60,7 @@ Two sentences like that in your own voice, tied to our data, beats five pages of
 
 ## Checklist before each set
 
-- [ ] Log line for every question where I used AI (or "no AI" on the ones I didn't)
-- [ ] Interpretation sentences written in my own words, about *our* data
-- [ ] Find-and-fix: did I say *why* I checked what I checked?
-- [ ] For check weeks: formula sheet updated, make-up slot booked if needed
+- Log line for every question where I used AI (or "no AI" on the ones I didn't)
+- Interpretation sentences written in my own words, about *our* data
+- Find-and-fix: did I say *why* I checked what I checked?
+- For check weeks: formula sheet updated, make-up slot booked if needed

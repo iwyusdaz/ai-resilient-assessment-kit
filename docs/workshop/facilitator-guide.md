@@ -109,12 +109,12 @@ The third prompt does the equity work. Instruct pairs to write feedback ON the c
 
 ## Pre-session checklist (facilitator)
 
-- [ ] Poll + sticky wall ready; pre-survey link in the calendar invite (or run it in minutes 0–2)
-- [ ] Slides shared 48h ahead (accessible HTML); handout + canvas printed/downloadable
-- [ ] AI tool logged in and tested on the room's network; backup outputs pasted in the slides appendix
-- [ ] Captions booked (online) or note-taker arranged (in person); room step-free; materials in advance
-- [ ] Decision tool link working on room Wi-Fi (it's static files — but test it)
-- [ ] Timing discipline plan: who flashes the 5-minute warnings (a co-facilitator or a phone timer)
+- Poll + sticky wall ready; pre-survey link in the calendar invite (or run it in minutes 0–2)
+- Slides shared 48h ahead (accessible HTML); handout + canvas printed/downloadable
+- AI tool logged in and tested on the room's network; backup outputs pasted in the slides appendix
+- Captions booked (online) or note-taker arranged (in person); room step-free; materials in advance
+- Decision tool link working on room Wi-Fi (it's static files — but test it)
+- Timing discipline plan: who flashes the 5-minute warnings (a co-facilitator or a phone timer)
 
 ## After the session
 

@@ -48,8 +48,8 @@ Ten minutes per team, in tutorial. Each member answers two questions from a publ
 
 ## Checklist before you submit
 
-- [ ] Notebook: ≥6 dated entries, ≥1 problem analysis, team members tagged on the entries they led
-- [ ] Memo: test choice + why + assumption checks + "what would change my decision"
-- [ ] Report: AI-use statement present; no AI-written statistics
-- [ ] Q&A: mode chosen (live / recorded / written), published question bank read
-- [ ] Dataset: de-identified (no names, emails, student IDs), submitted with the collection notes
+- Notebook: ≥6 dated entries, ≥1 problem analysis, team members tagged on the entries they led
+- Memo: test choice + why + assumption checks + "what would change my decision"
+- Report: AI-use statement present; no AI-written statistics
+- Q&A: mode chosen (live / recorded / written), published question bank read
+- Dataset: de-identified (no names, emails, student IDs), submitted with the collection notes

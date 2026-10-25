@@ -37,14 +37,14 @@ The working one-pager (print it, or fill it in as text). The facilitated version
 
 ## 4 · Design moves (1–3, from the eight approaches / decision tool)
 
-- [ ] Staged submissions
-- [ ] Process portfolio (log / notebook)
-- [ ] Personal or local data
-- [ ] Critique-the-AI-output items
-- [ ] Open AI use + reflection
-- [ ] Oral/written defence (with written alternative)
-- [ ] Weighted secure checks
-- [ ] In-class writing (mind the equity notes)
+- Staged submissions
+- Process portfolio (log / notebook)
+- Personal or local data
+- Critique-the-AI-output items
+- Open AI use + reflection
+- Oral/written defence (with written alternative)
+- Weighted secure checks
+- In-class writing (mind the equity notes)
 
 My picks, and the workload estimate in minutes × students:
 
