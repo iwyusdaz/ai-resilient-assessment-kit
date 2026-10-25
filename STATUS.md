@@ -34,16 +34,25 @@ Last updated: **2026-10-25** (v1.0.0 build complete)
 | Check | Command | Result |
 |---|---|---|
 | Pipeline syntax | `node --check` on all pipelines | OK |
-| Dry-run, stress test | `node research/run-stress-test.mjs --dry-run` | 18 stub generations + 36 stub judgments, no network |
+| Dry-run, stress test | `node research/run-stress-test.mjs --dry-run` | 18 stub generations + 36 stub judgments, no network (also `--redesign` mode) |
 | Dry-run, review panel | `node evaluation/run-review-panel.mjs --dry-run` | 66 stub files, no network |
 | Dry-run, participants | `node evaluation/run-simulated-participants.mjs --dry-run` | 70 stubs + mechanical agenda check PASS (segments tile 0–90) |
-| Placeholder .env guard | `cp .env.example .env && npm run eval:pending` | exits 1, clear message, zero network (see verification transcript) |
-| Decision tool tests | `node evaluation/tests/decision-tool-tests.mjs` | 20/20 PASS |
-| axe: decision tool + slides | `node tooling/audit-axe.mjs <local urls>` | 0 violations (0 critical/serious) |
-| Internal links + fragments | `node evaluation/tests/check-md-links.mjs` | 137 links, all resolve |
-| Secrets | `gitleaks detect` | clean (no secrets in history or working tree) |
-| No `.env` in history | `git log --all --name-only` check | never committed |
+| Placeholder .env guard | `cp .env.example .env && npm run eval:pending` | all three pipelines exit 1, clear message, zero network |
+| Decision tool tests (local) | `node evaluation/tests/decision-tool-tests.mjs` | 20/20 PASS |
+| Decision tool tests (live) | `node evaluation/tests/decision-tool-tests.mjs https://iwyusdaz.github.io/ai-resilient-assessment-kit/decision-tool/index.html` | **20/20 PASS** |
+| axe: decision tool + slides (local) | `node tooling/audit-axe.mjs <local urls>` | 0 violations |
+| axe: all 30 live pages | `node tooling/audit-axe.mjs <30 live urls>` | **0 critical/serious on every page** after two live-only fixes (below) |
+| Internal links + fragments (source) | `node evaluation/tests/check-md-links.mjs` | 137 internal links + fragments resolve |
+| Live linkcheck | `node tooling/linkcheck.mjs https://iwyusdaz.github.io/ai-resilient-assessment-kit/ --max 400` | **34 pages, 0 broken links** |
+| External citations | curl status sweep of 13 sources | 8 × 200; 4 bot-blocked (403: MDPI ×2, preprints.org, OpenAI — existence verified via publisher index, noted in literature-notes); TEQSA connection timeout (search-index verified, noted) |
+| Secrets | `gitleaks detect` (9 commits) | no leaks found |
+| No `.env` in history | `git log --all --name-only` | never committed |
 | No files > 50 MB | `git rev-list --objects --all` size check | none |
+
+### Live-build fixes (found only after Pages deploy — recorded per the plan's warning)
+
+1. **GFM task-list checkboxes rendered as unlabeled inputs** (axe: critical, `label`) on the five pages using `- [ ]` syntax — Jekyll renders them as bare `<input type="checkbox" disabled>` with no accessible name. Fix: converted to plain bullets; re-audited clean (commit `8a28454`).
+2. **Scrollable regions without keyboard access** (axe: serious, `scrollable-region-focusable`) — Just the Docs wraps wide rubric tables in `.table-wrapper` with `overflow-x: auto`; the four table-heavy pages were flagged. Fix: the theme footer now sets `tabindex="0"` on any overflowing wrapper/`pre` (commit `5ef7150`); re-audited 0 violations.
 
 ## Known gaps (honest list)
 
@@ -51,4 +60,4 @@ Last updated: **2026-10-25** (v1.0.0 build complete)
 2. **No human participants in anything yet** — no educator review, no workshop delivery, no real screen-reader pass. All protocols ready.
 3. **Same-model limitation** — agent review may share the author's underlying model; stated wherever agent review is mentioned.
 4. **Workshop timings are estimates** — validated only arithmetically; the simulated-participants pipeline (pending) is designed to stress them; real delivery is the owner's optional step.
-5. **Live-site axe audit + linkcheck re-run** — scheduled immediately after the Pages build completes.
+5. ~~Live-site axe audit + linkcheck re-run~~ — **done 2026-10-25**: all 30 pages 0 critical/serious (after the two live-build fixes above); 34-page crawl, 0 broken links; decision-tool suite 20/20 against the live build.

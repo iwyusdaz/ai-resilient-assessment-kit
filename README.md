@@ -59,7 +59,9 @@ Faculty AI guidance is mostly generic: "use more orals", "ban it", "teach prompt
 
 ## Accessibility
 
-- Tested: axe-core (0 violations on the interactive pages; full-site audit re-run on the live build), Playwright scripted keyboard/320 px/zoom tests (20/20), semantic HTML slides readable without CSS with speaker notes as text, AI-use-level icons always paired with text, rubric tables with proper header markup.
+- Tested (live build, 2026-10-25): axe-core over **all 30 published pages — 0 critical/serious violations**; the decision-tool suite runs **20/20 against the live site** (keyboard-only completion, focus management, live-region announcements, Back/Start-over, error alerts, 320 px and 256 px reflow, zero data leaves the page); full-site link check: 34 pages, 0 broken links.
+- Two issues found only on the live Pages build were fixed and re-audited clean: Jekyll's rendering of task-list checkboxes (unlabeled inputs → converted to plain lists) and wide tables in scrollable wrappers (wrappers now keyboard-focusable). See STATUS.md for the commit history.
+- Semantic HTML slides readable without CSS, speaker notes as text; AI-use-level icons always paired with text; rubric tables use real header markup; high-contrast palette; `prefers-reduced-motion` respected.
 - **Manual screen-reader check: not yet run.** Guidepup/VoiceOver automation is non-functional on this build machine (macOS 27); the kit ships a 15-minute manual VoiceOver script (`evaluation/human-protocol/manual-voiceover-check.md`) so anyone can run and record it. This is a known gap, stated here rather than hidden.
 - No WCAG conformance claim is made; pages are designed to support WCAG 2.1 AA and tested with automated tools.
 
