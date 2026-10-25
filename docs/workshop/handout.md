@@ -63,4 +63,4 @@ Use the [canvas](activity-redesign-canvas.html) in the sprint. The one-line vers
 
 ## 7. Pre/post survey
 
-Two minutes, anonymous, five confidence items + two open questions: [survey](survey.html). The same items before and after — that's how we know whether the session worked.
+About five minutes, anonymous, five confidence items + two open questions: [survey](survey.html). The pre-survey comes with the calendar invite — do it before the session; the same items before and after are how we know whether the session worked.

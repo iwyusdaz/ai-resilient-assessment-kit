@@ -48,7 +48,7 @@ By the end, participants have:
 
 **Script (5 min):** *"I'm going to paste this brief in, as a student would. While it types: take 60 seconds and score what you see against the rubric. Not the AI's soul — the rubric. Where does it pass? Where does it fail?"*
 
-**The demo (7 min):** run the naive prompt first. Then the determined prompt (brief + rubric + "revise toward the top band"). Participants score both against the rubric on the handout.
+**The demo (7 min):** run the naive prompt first. Then the determined prompt (brief + rubric + "revise toward the top band"). Participants score both against the rubric on the handout — **as a gut-score skim: 60 seconds per round, first impressions only.** Say this out loud: real scoring of a 1,500-word essay is a six-minute read per round, so the segment only fits as a skim — the totals are a vibe, not a mark. That is the point: if a glance satisfies the rubric, the rubric isn't measuring much.
 
 **Debrief (3 min):** collect scores aloud or on the poll. Name the pattern the kit's [stress-test analysis](../case-a-essay/stress-test.html) predicts: *the criteria AI satisfies easily are usually the ones we grade most heavily — fluency, structure, plausible citations.* Be honest about the limits of a live demo: **you are showing capability, not a measured study** — the kit's protocol page explains what a measured run adds.
 
@@ -56,9 +56,11 @@ By the end, participants have:
 
 ### 25–40 — Principles + AI-use levels
 
-**Script (10 min input):** walk the [six principles](../principles.html) — one slide each, 90 seconds — then the [AIAS 2.1 levels](../ai-use-levels.html) with the two-lane picture: *secure a few checks; open the practice.* Use one case example per principle (the [approaches comparison](../approaches.html) has the workload/equity numbers that make it credible for skeptics).
+**Input (~6 min):** follow the deck, not the principle list — the deck compresses the six principles into four slides. Slide 5 = principle 1 (~90 seconds). Slide 6 = principle 2 **and the [AIAS 2.1 levels](../ai-use-levels.html) recap**, with the two-lane picture: *secure a few checks; open the practice* (~2 minutes). Slides 7–8 = principles 3–6, with Case B's weights and the detection evidence (~90 seconds each). Use one case example per principle (the [approaches comparison](../approaches.html) has the workload/equity numbers that make it credible for skeptics).
 
 **Interaction (5 min):** *"Turn to your neighbour: name one assessment you run. Which AIAS level would each part of it honestly deserve today?"* Take 2–3 answers aloud (repeat them for captioning/blind participants).
+
+That leaves 3–4 minutes of deliberate buffer — the demo segment before this one runs hot, and the sprint must start on time.
 
 ### 40–42 — Break
 
@@ -66,13 +68,13 @@ Announce the return activity clearly: *"Back at 42, you'll redesign YOUR assignm
 
 ### 42–70 — Redesign sprint (the heart)
 
-Pairs (or trios of same-discipline colleagues). Each pair works **one participant's real assignment** through the [redesign canvas](activity-redesign-canvas.html):
+Pairs (or trios of same-discipline colleagues). **Designed for 12–30 participants (6–15 pairs)** — every segment's timing assumes it; above ~40 participants, split the room or run two concurrent sprints. Each pair works **one participant's real assignment** through the [redesign canvas](activity-redesign-canvas.html). The five steps are time-boxed to 26 minutes, leaving ~2 minutes of buffer inside the 28-minute slot:
 
-1. **What learning must it show?** (5 min) — one sentence, not a paragraph.
-2. **Where is it vulnerable?** (5 min) — using the canvas's criterion-risk questions.
-3. **Choose AI-use levels per stage** (8 min) — with the AIAS card in the handout.
-4. **Pick your design moves** (10 min) — pairs can run the [decision tool](../decision-tool/index.html) on a phone/laptop as a cross-check; facilitator circulates.
-5. **Sketch the rubric change** (5 min) — which criterion replaces "quality of prose"?
+1. **What learning must it show?** (4 min) — one sentence, not a paragraph.
+2. **Where is it vulnerable?** (4 min) — using the canvas's criterion-risk questions.
+3. **Choose AI-use levels per stage** (6 min) — with the AIAS card in the handout.
+4. **Pick your design moves** (8 min) — facilitator circulates. Finish early? Run the [decision tool](../decision-tool/index.html) on a phone/laptop as a cross-check (it takes 3–5 minutes, so it is an **early-finisher option**, not part of the timed step).
+5. **Sketch the rubric change** (4 min) — which criterion replaces "quality of prose"?
 
 **Facilitation moves:** every 10 minutes, broadcast one live example to the room ("Table 3 just moved 30% of the grade from the essay to a 5-minute defence — ask them why"). Keep pairs on *one* assignment. The most common stall: trying to redesign the whole course. Park it on the canvas's "what this does NOT solve" box.
 
@@ -86,13 +88,13 @@ Post canvases (or swap PDFs/screen shares online). Structured feedback prompts �
 2. *What would you cut to protect the grading time?*
 3. *Which student would struggle with this redesign, and what would help them?*
 
-The third prompt does the equity work. Instruct pairs to write feedback ON the canvas (or in the shared doc) in 3 minutes per canvas, rotating.
+The third prompt does the equity work. **Rotation is capped: each pair visits exactly two other canvases, 2 × 4 minutes, then a 4-minute harvest** (facilitator reads 2–3 of the best answers to prompt 3 aloud). Two canvases is the cap, not a minimum-with-more — at 12 minutes, more rotations mean no one finishes a read. Online: pre-assign doc pairs before the session so nobody waits for a rotation; feedback goes in comments during each 4-minute window.
 
 ### 82–90 — Commitments + post-survey
 
-**Script (3 min):** *"On your canvas footer, write ONE next step you will take within two weeks, and the date you'll do it."* Go around the room (or chat stream): each pair says their step in ≤15 seconds. Facilitator photographs/collects canvases only with the pair's permission — say this explicitly.
+**Script (3 min):** *"On your canvas footer, write ONE next step you will take within two weeks, and the date you'll do it."* While pairs write, display the [post-survey](survey.html) QR code — it runs **in parallel** (it takes ~5 minutes, which is why it cannot sit after the go-around). Facilitator photographs/collects canvases only with the pair's permission — say this explicitly.
 
-**Post-survey (5 min):** the [post-survey](survey.html) (same items as pre, plus the two open questions). Pre-survey was sent with the calendar invite / done in minute 0–2.
+**Go-around (2–3 min):** take **six volunteered pairs, ≤15 seconds each** — with more pairs, collect the rest in writing or on the chat stream; a full go-around at 15 pairs would eat the closing.
 
 **Close (2 min):** point to the kit URL, the three cases, and the offer: *"If you want a colleague to pressure-test your redesign, the teaching centre will pair you with someone who used this canvas — email us."*
 
@@ -102,14 +104,14 @@ The third prompt does the equity work. Instruct pairs to write feedback ON the c
 |---|---|
 | *"Just ban it."* | "You can write that policy this afternoon — the question is what it does to validity and trust. Unenforceable bans convert assessment into an honesty lottery. Look at what Case B did instead: the practice lane is open and cheap, the assurance moved to checks that actually certify." |
 | *"Oral exams are impossible with 300 students."* | "Right — one-to-one vivas don't scale. But the redesigned orals here are five minutes, sampleable, tutorial-based, or written. Case A's defence samples every 5th student. What's your ratio?" |
-| *"This is a workload increase."* | "Check the faculty-notes pages: Case A nets slightly lower marking time; Case B halves it. If a redesign costs you more than the original, it's mis-designed — bring it to the gallery walk and we'll fix it." |
+| *"This is a workload increase."* | "Check the faculty-notes pages: Case A marks in comparable time with checkpoint evidence; Case B's honest arithmetic lands at roughly 30% of the original load. If a redesign costs you more than the original, it's mis-designed — bring it to the gallery walk and we'll fix it." |
 | *"Detectors would solve this."* | "The evidence says otherwise: 14 tools tested, none above 80% accuracy, degraded on edited and machine-translated text, biased against non-native writers, and OpenAI retired its own for inaccuracy. I'd rather not investigate a student on a false positive." |
 | *"My discipline is different."* | "The cases cover essay, problem set and report. The canvas works on anything assessable — start from 'what must the grade certify', not from the artefact." |
 | *"Students will be honest about AI use? Really?"* | "Some won't — that's true of every assessment. The design makes honesty cheap (completion-graded logs) and makes the secure checks the real evidence. We're not claiming to make everyone honest; we're claiming the grade means something." |
 
 ## Pre-session checklist (facilitator)
 
-- Poll + sticky wall ready; pre-survey link in the calendar invite (or run it in minutes 0–2)
+- Poll + sticky wall ready; pre-survey link in the calendar invite (it takes ~5 minutes, so it is **not** run in-session — participants who miss it are excluded from the pre/post comparison)
 - Slides shared 48h ahead (accessible HTML); handout + canvas printed/downloadable
 - AI tool logged in and tested on the room's network; backup outputs pasted in the slides appendix
 - Captions booked (online) or note-taker arranged (in person); room step-free; materials in advance

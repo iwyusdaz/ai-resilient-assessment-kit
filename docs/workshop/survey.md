@@ -6,7 +6,7 @@ nav_order: 4
 
 # Workshop survey — pre and post
 
-**Same items before and after.** Five confidence items (5-point Likert) + two open questions. Anonymous; collect the pre-survey via the calendar-invite link or in minutes 0–2, the post-survey in minutes 82–88. Run it as a form (LMS/Forms) or print both halves of this page.
+**Same items before and after.** Five confidence items (5-point Likert) + two open questions. Anonymous; takes about **5 minutes**. Collect the pre-survey via the calendar-invite link only — it is not run in-session (five Likert items plus two open questions do not fit in the opening's spare minutes, and the opening poll already competes for attention). Collect the post-survey during minutes 82–90 **while pairs write their commitments** (QR code on screen). Run it as a form (LMS/Forms) or print both halves of this page.
 
 ## Part 1 — Confidence items (5 = strongly agree … 1 = strongly disagree)
 
@@ -29,6 +29,7 @@ Rate yourself right now:
 ## Data handling
 
 - Anonymous by design: no names, no emails, no free-text asking for identifying details.
+- Participants who miss the pre-survey (calendar-invite only) are excluded from the pre/post means rather than surveyed mid-session — say so in the summary.
 - Aggregate reporting only (pre/post means per item, themes from open text).
 - If you collect canvases with workshop permission, store them separately from survey data.
 - Share the summary back with participants — the loop closes when they see what changed.

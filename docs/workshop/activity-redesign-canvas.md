@@ -4,18 +4,18 @@ parent: Workshop facilitator guide
 nav_order: 2
 ---
 
-# Redesign canvas — 25-minute activity
+# Redesign canvas — the 26-minute sprint
 
-Used in the workshop's redesign sprint (minutes 42–70), and afterwards on your own. Pairs work on **one real assignment**. The blank version for printing is [templates/redesign-canvas-blank](../templates/redesign-canvas-blank.html) — this page adds the prompts and examples for facilitated use.
+Used in the workshop's redesign sprint (minutes 42–70: the five steps below are time-boxed to 26 minutes, leaving ~2 minutes of buffer in the 28-minute slot), and afterwards on your own. Pairs work on **one real assignment**. The blank version for printing is [templates/redesign-canvas-blank](../templates/redesign-canvas-blank.html) — this page adds the prompts and examples for facilitated use.
 
-## Box 1 — What learning must this assessment show? (5 min)
+## Box 1 — What learning must this assessment show? (4 min)
 
 One sentence: *a passing grade certifies that the student can ___.*
 
 - Not "writes good essays" — what does the essay certify? (argue from evidence? find and verify sources?)
 - Example (Case A): *"…can select and verify scholarly evidence and defend an argumentative choice under questioning."*
 
-## Box 2 — Where is it vulnerable? (5 min)
+## Box 2 — Where is it vulnerable? (4 min)
 
 For each rubric criterion, ask: *could a competent AI produce this artefact at this standard without the learning?* Mark each criterion:
 
@@ -27,7 +27,7 @@ For each rubric criterion, ask: *could a competent AI produce this artefact at t
 
 Example (Case A, original): thesis/argument **Pass**; use of evidence **Fragile→Pass** (formatting rewards, fabrication risk); analysis **Fragile**; writing **Pass**.
 
-## Box 3 — AI-use level for each stage (8 min)
+## Box 3 — AI-use level for each stage (6 min)
 
 List the stages of your task and assign an AIAS 2.1 level to each — icon + text:
 
@@ -40,9 +40,9 @@ List the stages of your task and assign an AIAS 2.1 level to each — icon + tex
 
 Rule of thumb from the cases: **open the practice, secure the proof.**
 
-## Box 4 — Design moves (10 min)
+## Box 4 — Design moves (8 min)
 
-Pick 1–3 moves from the [eight approaches](../approaches.html) (or run the [decision tool](../decision-tool/index.html) and read the reasoning):
+Pick 1–3 moves from the [eight approaches](../approaches.html):
 
 - Staged submissions → checkpoints you can verify cheaply
 - Process portfolio (log/notebook) → the journey becomes evidence
@@ -53,7 +53,9 @@ Pick 1–3 moves from the [eight approaches](../approaches.html) (or run the [de
 - Weighted secure checks → the certificate lives here
 - In-class writing → strong link, watch the equity notes
 
-## Box 5 — Sketch the rubric change (5 min)
+**Finish step 4 early?** Run the [decision tool](../decision-tool/index.html) as a cross-check (3–5 minutes — an early-finisher option, not part of the timed step).
+
+## Box 5 — Sketch the rubric change (4 min)
 
 - Which criterion **dies** (it certified fluency)?
 - Which criterion **replaces** it (verification? defence? AI-use judgment)?
