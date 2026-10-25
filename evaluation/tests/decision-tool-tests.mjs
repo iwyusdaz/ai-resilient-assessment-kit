@@ -128,13 +128,15 @@ try {
   const btnBox = await page2.locator("#btn-submit").boundingBox();
   check("T10: submit button tappable at 256px", !!btnBox && btnBox.height >= 24);
 
-  // T11 nothing stored / no network beyond initial assets
+  // T11 nothing stored / no data sent beyond same-origin asset loads
   let extraRequests = 0;
+  const origin = new URL(target).origin;
   const page3 = await ctx.newPage();
   page3.on("request", (req) => {
     const u = req.url();
-    // Only requests OFF our own origin count: the tool must never send data anywhere.
-    if (!u.startsWith(base) && !u.startsWith("data:")) extraRequests++;
+    // Any request leaving our origin while using the tool counts as a failure;
+    // same-origin asset loads (css/js/json/favicon) are fine.
+    if (!u.startsWith(origin) && !u.startsWith("data:")) extraRequests++;
   });
   await page3.goto(target, { waitUntil: "networkidle" });
   await answerAll(page3);
