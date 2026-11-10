@@ -1,33 +1,45 @@
 # STATUS — ai-resilient-assessment-kit
 
-Last updated: **2026-10-26** (revision round 1 applied — see docs/evaluation/revisions.md)
+Last updated: **2026-11-11** (agent-simulated evaluation replaced the API pipelines; see DECISIONS D7 and docs/evaluation/revisions.md)
 
 ## Current state
 
 | Item | Status |
 |---|---|
-| Repository | github.com/iwyusdaz/ai-resilient-assessment-kit (published 2026-10-25; revision round 2026-10-26) |
+| Repository | github.com/iwyusdaz/ai-resilient-assessment-kit (published 2026-10-25; revision round 2026-10-26; agent-simulated evaluation 2026-11-11) |
 | Live site | https://iwyusdaz.github.io/ai-resilient-assessment-kit/ (Pages from main `/docs`, Just the Docs v0.12.0 pinned) |
-| Research layer (verified literature notes + stress-test protocol) | Complete — browsable on the site under `docs/research/` (moved 2026-10-26; pipeline scripts remain in `research/`) |
+| Research layer (verified literature notes + stress-test protocol) | Complete; browsable on the site under `docs/research/` (moved 2026-10-26; `research/results/` holds the stress-test outputs) |
 | Core pages (principles, eight approaches, AI-use levels w/ verified AIAS 2.1 names) | Complete |
-| Case A (essay) — 6 files | Complete (scores PENDING); grading-time arithmetic reconciled 2026-10-26 (rows sum to the headline) |
-| Case B (problem set) — 6 files | Complete (scores PENDING); practice lane standardized at 10% total + gradebook budget stated 2026-10-26 |
-| Case C (research report) — 6 files | Complete (scores PENDING); 38→30% weight structure adopted in brief + redesign; Q&A aligned at 2 min/student 2026-10-26 |
-| Stress-test score tables | **PENDING — requires API key** (`research/run-stress-test.mjs`; dry-run tested; blind cross-model judging per DECISIONS.md D3) |
-| Re-test on redesigns | **PENDING — requires API key** (`--redesign` mode; protocol step 5) |
+| Case A (essay): 6 files | Complete (agent-simulated score 18/20 on the original rubric); grading-time arithmetic reconciled 2026-10-26 (rows sum to the headline) |
+| Case B (problem set): 6 files | Complete (agent-simulated: Q1 to Q4 with 0 errors); practice lane standardized at 10% total + gradebook budget stated 2026-10-26 |
+| Case C (research report): 6 files | Complete (agent-simulated score 23/30 on the original rubric); 38→30% weight structure adopted in brief + redesign; Q&A aligned at 2 min/student 2026-10-26 |
+| Stress-test score tables | **Agent-simulated, done 2026-11-11**: one AI agent, single model, one Determined output per case, self-scored, not blind (`research/results/agent-stress-test-2026-11-11/`). The blind cross-model design of D3 was not run (DECISIONS D7) |
+| Re-test on redesigns | **Not run** (protocol step 5) |
 | Decision tool | Complete, axe-clean (0 violations), **28/28 scripted tests** (keyboard, first-reveal focus + no focus yank on recompute, live region, low-confidence warning, 320px/256px reflow, zero data sent); logic verified over all 972 answer combinations (0 assurance combos without a secure check); in the sidebar nav since 2026-10-26 |
-| Workshop package (guide, 13 HTML slides, canvas, handout, pre/post survey) | Complete — retimed 2026-10-26 so segment steps fit their slots (sprint 4/4/6/8/4 + buffer; parallel post-survey; gallery-walk rotation cap; group size stated); **agenda timing not yet validated by delivery** (mechanical arithmetic check passes; simulated-participant pipeline pending); slides in the sidebar nav since 2026-10-26 |
+| Workshop package (guide, 13 HTML slides, canvas, handout, pre/post survey) | Complete; retimed 2026-10-26 so segment steps fit their slots (sprint 4/4/6/8/4 + buffer; parallel post-survey; gallery-walk rotation cap; group size stated); **agenda timing not yet validated by delivery** (mechanical arithmetic check passes; agent-simulated participants judged 33 of 35 timings realistic and raised 11 open flags); slides in the sidebar nav since 2026-10-26 |
 | Templates (syllabus + assignment AI statements, blank canvas) | Complete |
 | axe audit (decision tool + slides, local) | Done — 0 violations (full-site audit re-run against live Pages build after publish) |
 | Internal link integrity | Done — 163 internal links + fragments across 43 files resolve (research pages now inside docs/) |
 | Playwright scripted tests | Done — 28/28 (see evaluation/results/accessibility/decision-tool-tests.md) |
 | Agent review (fresh-context reviewer agent, structured form) | **Run 2026-10-26** — full review in `evaluation/agent-review.md` (labelled "Agent review", never "educator review"; same-model limitation stated); dispositions in docs/evaluation/revisions.md; changes applied this round |
-| Multi-model review panel | **PENDING — requires API key** (`evaluation/run-review-panel.mjs`; dry-run tested) |
-| AI-simulated workshop participants | **PENDING — requires API key** (`evaluation/run-simulated-participants.mjs`; dry-run tested; mechanical agenda check passes) |
+| Agent-simulated review panel | **Done 2026-11-11**: one agent, 3 roles × 4 files = 12 reviews; 2 major + 21 minor open issues (`evaluation/results/review-panel-summary.md`); no cross-model agreement (single model) |
+| Agent-simulated workshop participants | **Done 2026-11-11**: one agent, 5 personas × 7 segments = 35 judgments; 11 open flags (`evaluation/results/simulated-participants-summary.md`); mechanical agenda check: `npm run test:agenda` PASS |
 | Educator review (≥ 3 human educators) | Not run — form, invitation and consent text ready in `evaluation/human-protocol/` + `docs/evaluation/educator-review.md` |
 | Manual VoiceOver check | Not run — script ready (`evaluation/human-protocol/manual-voiceover-check.md`); Guidepup non-functional on macOS 27, so no VoiceOver claims are made anywhere |
 | Social preview image | Generated at `docs/assets/social-preview.png` (1280×640); **uploading via Settings → General is an owner task** (no API) |
-| Pipeline guardrails | Verified: placeholder `.env` → exit 1, zero network; `--dry-run` → stubs labelled "DRY RUN – NOT REAL RESULTS" |
+| Model APIs | None used; the API pipelines, `lib/env.mjs` and `.env.example` were removed 2026-11-11 |
+
+## Verification log (2026-11-11): agent-simulated evaluation round
+
+| Check | Command | Result |
+|---|---|---|
+| Internal links + fragments (source) | `npm run test:md-links` | 165 internal links across 43 files, all resolve |
+| Mechanical agenda check | `npm run test:agenda` | PASS: 7 segments tile 0 to 90 minutes |
+| Decision tool tests (local) | `npm run test:decision-tool` | **28/28 PASS** |
+| axe: decision tool + slides (local) | `node tooling/audit-axe.mjs <local urls>` | 0 violations on both |
+| No key requirement left | `git grep -i "api key\|API_KEY\|eval:pending"` | Only history: CHANGELOG 1.0.0 entries, DECISIONS D1 (the 2026-10-25 decision as taken), the 2026-10-25/26 logs below, `evaluation/agent-review.md` (the 2026-10-26 review as written) |
+
+The 2026-10-25 and 2026-10-26 logs below are kept as history. They mention pipelines, dry runs and `.env` checks that no longer exist.
 
 ## Verification log (2026-10-26) — post-publish, after the revision round
 
@@ -72,8 +84,8 @@ Last updated: **2026-10-26** (revision round 1 applied — see docs/evaluation/r
 
 ## Known gaps (honest list)
 
-1. **All stress-test numbers pending** — case pages show labelled reasoning, not results, until the API run.
+1. **Stress-test numbers are agent-simulated only.** One agent, one Determined output per case, self-scored and not blind; no second model, no Naive or Moderate strategy, no re-test on the redesigns, no human scorer.
 2. **No human participants in anything yet** — no educator review, no workshop delivery, no real screen-reader pass. All protocols ready.
-3. **Same-model limitation** — agent review may share the author's underlying model; stated wherever agent review is mentioned.
-4. **Workshop timings are estimates** — validated arithmetically and against the agent review's segment-by-segment timing walkthrough (2026-10-26, which found two overflowing segments; both rebalanced); the simulated-participants pipeline (pending) is designed to stress them; real delivery is the owner's optional step.
+3. **Same-model limitation.** The agent review and all agent-simulated runs may share the author's underlying model; stated wherever they are mentioned.
+4. **Workshop timings are estimates.** Validated arithmetically and against the agent review's segment-by-segment timing walkthrough (2026-10-26, which found two overflowing segments; both rebalanced); the agent-simulated participants (2026-11-11) raised 2 timing flags, still open; real delivery is the owner's optional step.
 5. ~~Live-site axe audit + linkcheck re-run~~ — **done 2026-10-25**: all 30 pages 0 critical/serious (after the two live-build fixes above); 34-page crawl, 0 broken links; decision-tool suite 20/20 against the live build.

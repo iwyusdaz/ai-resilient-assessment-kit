@@ -7,21 +7,21 @@ nav_order: 2
 # Case C — stress test
 
 {: .note }
-**Status of this page.** Protocol and prompts are final; the vulnerability analysis is our **design reasoning, not measured results**. **All score tables are PENDING — requires API key.** No fabricated AI outputs or scores appear here, and no "constructed example" of AI output is included: anything shown pre-run would be our writing presented as a model's, which this kit refuses to do.
+**Status of this page.** Protocol and prompts are final; the vulnerability analysis is our **design reasoning, not measured results**. A smaller **agent-simulated stress test** was run on 2026-11-11: one AI agent (single model, no API) wrote one Determined-strategy report from the dataset summary and scored it against the original rubric itself. That result is below, labelled as such. The planned blind cross-model judge panel was not run, because it needs model APIs. No constructed example of AI output appears here; the only AI output linked is the agent's actual submission.
 
 ## Method
 
-Per the [stress-test protocol](../research/stress-test-protocol.html), with a Case C addition: the brief is accompanied by a **data summary** (the provided dataset's codebook and descriptive statistics) as the prompt context, because that is how a student would use AI realistically — pasting the summary, not the full 150-row file.
+The [stress-test protocol](../research/stress-test-protocol.html) describes the full design, with a Case C addition: the brief is accompanied by a **data summary** (the provided dataset's codebook and descriptive statistics) as the prompt context, because that is how a student would use AI realistically: pasting the summary, not the full 150-row file. The full design was not run. What was run is a smaller agent-simulated version:
 
-| Run parameter | Value |
-|---|---|
-| Models | MODEL_A, MODEL_B (names recorded at run time) |
-| Context | Brief + dataset codebook + descriptives summary |
-| Strategies | Naive · Moderate · Determined |
-| Outputs | 6 (3 strategies × 2 models) |
-| Judges | Blind panel; no model judges its own output (A→B+C, B→A+C) |
-| Rubric | Original 30-point scheme |
-| Extra | Statistical-accuracy census: test choice, reported statistics, figure description vs. codebook |
+| Run parameter | Planned (not run) | Run on 2026-11-11 |
+|---|---|---|
+| Models | MODEL_A, MODEL_B | One AI agent (the Kiro build agent), single model, no API |
+| Context | Brief + dataset codebook + descriptives summary | Brief + the summary shown below (no raw dataset exists) |
+| Strategies | Naive · Moderate · Determined | Determined only |
+| Outputs | 6 (3 strategies × 2 models) | 1 |
+| Judges | Blind panel; no model judges its own output | The same agent, not blind |
+| Rubric | Original 30-point scheme | Original 30-point scheme |
+| Extra | Statistical-accuracy census: test choice, reported statistics, figure description vs. codebook | Same census; every statistic recomputed with a Node.js calculation; every reference looked up by web search |
 
 ## Exact prompts
 
@@ -52,16 +52,14 @@ the discussion specific to these numbers.
 
 ## Score table (original scheme, 30 points)
 
-| Submission | Strategy | Judge 1 | Judge 2 | Mean | Judge diff | Statistical errors found |
-|---|---|---|---|---|---|---|
-| C-1 | Naive | **PENDING: requires API key** | **PENDING** | — | — | — |
-| C-2 | Naive | **PENDING: requires API key** | **PENDING** | — | — | — |
-| C-3 | Moderate | **PENDING: requires API key** | **PENDING** | — | — | — |
-| C-4 | Moderate | **PENDING: requires API key** | **PENDING** | — | — | — |
-| C-5 | Determined | **PENDING: requires API key** | **PENDING** | — | — | — |
-| C-6 | Determined | **PENDING: requires API key** | **PENDING** | — | — | — |
+**Agent-simulated, single model, self-scored.** Not human marking and not a blind panel.
 
-Raw outputs, judge prompts and the statistical-accuracy census will be committed under `research/results/stress-test/` after the first real run.
+| Submission | Strategy | Intro (6) | Method (5) | Results (7) | Discussion (7) | Writing & APA (5) | Total | Statistical errors found |
+|---|---|---|---|---|---|---|---|---|
+| C-determined | Determined | 6 | 4 | 4 | 5 | 4 | **23/30** | Arithmetic 0. Test choice weaker than the design calls for (t-test on post scores, not ANCOVA; the report says so). Equal groups of 75 assumed (disclosed). One unsupported inference ("from a shared baseline level"). Figure described, not drawn. |
+| Naive, Moderate, second model | | | | | | | not run | |
+
+Other weaknesses: 1,157 of the required 2,000 words. All 8 references exist (web check). The raw submission, the recalculation and the scoring notes are in [`research/results/agent-stress-test-2026-11-11/`](https://github.com/iwyusdaz/ai-resilient-assessment-kit/blob/main/research/results/agent-stress-test-2026-11-11/summary.md). Limits: one agent wrote and scored its own output, knew the strategy, and had read this analysis first.
 
 ## Vulnerability analysis (design reasoning, not measured results)
 
@@ -75,8 +73,10 @@ Raw outputs, judge prompts and the statistical-accuracy census will be committed
 
 **What survives in the original:** nothing structural. Even the "statistics must be your own" line adds only friction — the descriptives summary is enough to generate a top-band-shaped report.
 
-**What we did NOT conclude:** we have not measured the scores. We conclude the task yields no valid evidence of the student's analytic capability, which makes the redesign question structural, not cosmetic.
+**What the agent run adds:** from the summary alone, the agent produced a structured APA report that it scored 23/30, with full marks on the introduction. Two expectations in the analysis did not hold in this one output: the agent did not invent mixed-ANOVA or ANCOVA statistics (it computed only what the summary allows and named the better test as a limitation), and none of its references were fabricated. The Results and Discussion marks were lost on test choice, an undrawn figure and one unsupported inference, which a marker can only catch by checking the statistics against the data.
+
+**What we did NOT conclude:** one self-scored agent output does not show what other models, other prompts or real students would produce. We conclude the task yields no valid evidence of the student's analytic capability, which makes the redesign question structural, not cosmetic.
 
 ## Re-test (redesigned task)
 
-**PENDING — requires API key.** The [redesign](redesign.html) makes part of the data the class's own and grades the notebook and Q&A, which AI cannot produce. The AI-completable remainder (the prose of the report, with disclosure) is left open by design. `research/run-stress-test.mjs --redesign` will run the three strategies against the redesigned brief + new rubric and report what AI can still do — the expected answer is "the write-up," which the assessment no longer treats as the evidence.
+**Not run.** The [redesign](redesign.html) makes part of the data the class's own and grades the notebook and Q&A, which AI cannot produce. The AI-completable remainder (the prose of the report, with disclosure) is left open by design. Protocol step 5 would run the strategies against the redesigned brief and new rubric; it has not been carried out, by models or by the agent. The expected answer remains "the write-up", which the assessment no longer treats as the evidence.

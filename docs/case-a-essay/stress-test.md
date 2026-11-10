@@ -7,20 +7,20 @@ nav_order: 2
 # Case A — stress test
 
 {: .note }
-**Status of this page.** The protocol, prompts and vulnerability analysis are complete. **All score tables are PENDING — requires API key.** The vulnerability analysis below is our **design reasoning, not measured results**: it states what we expect AI to satisfy easily and why, based on the task's design and the published evidence cited in the [literature notes](../research/literature-notes.html). When the pipeline runs, measured scores will replace the PENDING tables and any analysis that the results contradict will be revised.
+**Status of this page.** The protocol, prompts and vulnerability analysis are complete. A smaller **agent-simulated stress test** was run on 2026-11-11: one AI agent (single model, no API) wrote one Determined-strategy submission and scored it against the original rubric itself. That result is below, labelled as such. The planned blind cross-model judge panel was not run, because it needs model APIs. The vulnerability analysis is our **design reasoning, not measured results**, based on the task's design and the published evidence in the [literature notes](../research/literature-notes.html); where the agent run disagrees with it, that is stated.
 
 ## Method
 
-Per the [stress-test protocol](../research/stress-test-protocol.html): the original brief above was (will be) given to two different AI models with three prompt strategies, outputs anonymised and shuffled, then scored blind by a two-judge panel in which no model judges its own output.
+The [stress-test protocol](../research/stress-test-protocol.html) describes the full design: two different AI models, three prompt strategies, anonymised outputs scored blind by a two-judge panel in which no model judges its own output. That design was not run. What was run is a smaller agent-simulated version:
 
-| Run parameter | Value |
-|---|---|
-| Models | MODEL_A and MODEL_B (names recorded by the pipeline at run time) |
-| Strategies | Naive · Moderate · Determined (prompts below) |
-| Outputs | 3 strategies × 2 models = 6 |
-| Judges | MODEL_B + MODEL_C score MODEL_A outputs; MODEL_A + MODEL_C score MODEL_B outputs |
-| Rubric | The original 20-point rubric above |
-| Blind | Judges see "Submission 1…6" only — never model, strategy, or prompt |
+| Run parameter | Planned (not run) | Run on 2026-11-11 |
+|---|---|---|
+| Models | MODEL_A and MODEL_B, different families | One AI agent (the Kiro build agent), single model, no API |
+| Strategies | Naive · Moderate · Determined | Determined only |
+| Outputs | 3 strategies × 2 models = 6 | 1 |
+| Judges | Two other models per output, blind | The same agent, not blind |
+| Extra checks | | Every reference looked up by web search |
+| Rubric | The original 20-point rubric above | The original 20-point rubric above |
 
 ## Exact prompts used
 
@@ -55,16 +55,14 @@ rubric as the scoring contract. Use your best effort.
 
 ## Score table (original rubric, 20 points)
 
-| Submission | Strategy | Judge 1 total | Judge 2 total | Mean | Judge difference | Key weaknesses reported |
-|---|---|---|---|---|---|---|
-| A-1 | Naive | **PENDING: requires API key** | **PENDING** | — | — | — |
-| A-2 | Naive | **PENDING: requires API key** | **PENDING** | — | — | — |
-| A-3 | Moderate | **PENDING: requires API key** | **PENDING** | — | — | — |
-| A-4 | Moderate | **PENDING: requires API key** | **PENDING** | — | — | — |
-| A-5 | Determined | **PENDING: requires API key** | **PENDING** | — | — | — |
-| A-6 | Determined | **PENDING: requires API key** | **PENDING** | — | — | — |
+**Agent-simulated, single model, self-scored.** Not human scoring and not a blind panel.
 
-Criterion-level scores and the exact judge prompts and raw outputs will be committed to `research/results/stress-test/` after the first real run. We deliberately do not include illustrative "sample AI output" text on this page: anything we could show here would be constructed, not generated, and this kit does not present constructed text as AI output.
+| Submission | Strategy | Thesis & argument | Use of evidence | Analysis & depth | Writing & organization | Total | Key weaknesses found |
+|---|---|---|---|---|---|---|---|
+| A-determined | Determined | 5 | 4 | 5 | 4 | **18/20** | 1,270 of the required 1,500 words; two source details misstated (a sample size, and a subgroup finding reported for all students). All 8 references exist (web check), but the agent had not read them. |
+| Naive, Moderate, second model | | | | | | not run | |
+
+The raw submission, the reference check and the scoring notes are in [`research/results/agent-stress-test-2026-11-11/`](https://github.com/iwyusdaz/ai-resilient-assessment-kit/blob/main/research/results/agent-stress-test-2026-11-11/summary.md). Limits: one agent wrote and scored its own output, knew the strategy, and had read this analysis first; one output cannot show variation.
 
 ## Vulnerability analysis (design reasoning, not measured results)
 
@@ -80,8 +78,10 @@ This is the analysis that drove the [redesign](redesign.html). It is our judgmen
 
 **What survives:** in the original design, essentially nothing is secure. The take-home artefact is the only evidence, and every rubric criterion rewards the artefact itself.
 
-**What we did NOT conclude:** we have not measured that AI *will* score in the top band — that's what the pending run is for. We conclude that the task *yields no evidence that distinguishes* AI-completed from student-completed work, which is a validity problem regardless of the measured scores.
+**What the agent run adds:** a single Determined prompt produced an essay the same agent scored 18/20, with full marks on thesis and analysis, which supports the risk ratings for criteria 1, 3 and 4. It did **not** support the expectation of fabricated citations: all eight references were real. The weakness was that they were unread, so two details were wrong in ways only opening the source would show. That is the gap the redesign's verification gate (a page-anchored quotation and one detail the citation alone could not supply) targets; a check that only asks whether each reference exists would have passed this essay.
+
+**What we did NOT conclude:** one self-scored agent output does not show what other models, other prompts or real students would produce. We conclude that the task *yields no evidence that distinguishes* AI-completed from student-completed work, which is a validity problem regardless of the measured scores.
 
 ## Re-test (redesigned task)
 
-**PENDING — requires API key.** The [redesign](redesign.html) will be stress-tested with the same three strategies against the **new** rubric (`research/run-stress-test.mjs --redesign`). Parts of the redesign are deliberately open (AI Collaboration on the draft and its AI-use log), so AI can still complete those parts well — that is by design. The re-test question is whether the *secure* parts (the verification gate, the defence) still discriminate. The table will appear here after the run.
+**Not run.** Protocol step 5 (the same strategies against the redesigned brief and the **new** rubric) has not been carried out, by models or by the agent. Parts of the redesign are deliberately open (AI Collaboration on the draft and its AI-use log), so AI can still complete those parts well; that is by design. The re-test question remains whether the *secure* parts (the verification gate, the defence) still discriminate.

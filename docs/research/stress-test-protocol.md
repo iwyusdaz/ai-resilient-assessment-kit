@@ -7,7 +7,10 @@ has_toc: false
 
 # Stress-test protocol
 
-How this kit tests an assignment against generative AI **before** redesigning it, and how the results will be produced and reported. Results tables live in each case's `stress-test.html` page and stay empty and marked **PENDING** until the API pipelines are run with real keys. This protocol is also the method of record for the pending pipeline `research/run-stress-test.mjs`.
+How this kit tests an assignment against generative AI **before** redesigning it, and how the results are produced and reported. Results tables live in each case's `stress-test.html` page.
+
+{: .note }
+**What has actually been run.** The full design below (two models, three strategies, blind cross-judging) has **not** been run, because it needs model APIs. On 2026-11-11 a smaller **agent-simulated** version was run instead: one AI agent (single model, no API) wrote one Determined-strategy submission per case, looked up every reference by web search, recomputed every statistic, and scored its own output against the original rubric. It was not blind and has no second judge, so no agreement figure exists. Results and raw outputs: [`research/results/agent-stress-test-2026-11-11/`](https://github.com/iwyusdaz/ai-resilient-assessment-kit/blob/main/research/results/agent-stress-test-2026-11-11/summary.md). The re-test on the redesigned tasks (step 5) has not been run.
 
 ## Ethics and scope
 
@@ -34,7 +37,7 @@ Each original brief is given to **two different AI models** (MODEL_A and MODEL_B
 
 That is 3 cases × 3 strategies × 2 models = **18 outputs** per full run.
 
-Prompts are exactly reproducible: the pipeline composes them from the case files on disk and stores the exact prompt text alongside every output.
+Prompts are exactly reproducible: each case's stress-test page gives the exact prompt text, and every saved output records the prompt it answered.
 
 ## Step 3 — Blind scoring by a judge panel
 
@@ -46,26 +49,20 @@ Prompts are exactly reproducible: the pipeline composes them from the case files
 
 ## Step 4 — Vulnerability analysis
 
-For each case, the pattern of scores and weaknesses is analysed: which rubric criteria AI satisfies easily, which it struggles with, and why. The analysis in each case's `stress-test.html` page is **our reasoning about why the assignment is vulnerable, based on the design of the task and published evidence — it is labelled "analysis, not measured results" until the pipeline has run.**
+For each case, the pattern of scores and weaknesses is analysed: which rubric criteria AI satisfies easily, which it struggles with, and why. The analysis in each case's `stress-test.html` page is **our reasoning about why the assignment is vulnerable, based on the design of the task and published evidence. It stays labelled "analysis, not measured results"; each case page states where the agent-simulated run supports or contradicts it.**
 
 ## Step 5 — Redesign and re-test
 
-Each case is redesigned (see each case's `redesign.html`), and the stress test is re-run **on the redesigned task** (`research/run-stress-test.mjs --redesign`): same strategies adapted to the new brief, scored against the **new** rubric. Redesigns deliberately leave some parts in the open lane where AI use is allowed — AI completing those parts is expected and acceptable, because the secure parts provide the valid evidence of individual achievement. The re-test asks: *what can AI still do, and is what remains graded valid?*
+Each case is redesigned (see each case's `redesign.html`), and the stress test is re-run **on the redesigned task** (not yet done): same strategies adapted to the new brief, scored against the **new** rubric. Redesigns deliberately leave some parts in the open lane where AI use is allowed. AI completing those parts is expected and acceptable, because the secure parts provide the valid evidence of individual achievement. The re-test asks: *what can AI still do, and is what remains graded valid?*
 
 ## Reproducing the results
 
-```bash
-cp .env.example .env     # fill in MODEL_A/B/C (OpenAI-compatible endpoints)
-npm run eval:pending     # runs stress test + review panel + simulated participants
-npm run eval:stress-test-redesign   # re-test on the redesigned tasks
-```
-
-- Without a configured `.env`, every pipeline exits with a clear message and makes **no network calls**.
-- `--dry-run` exercises the full code path with stub responses into `dry-run/`, labelled "DRY RUN – NOT REAL RESULTS", never used as results.
-- Raw outputs (prompts, full responses, judge scores, model names, timestamps) are saved under `research/results/stress-test/` and committed after a real run.
+- **Agent-simulated version (what was run):** give each case's exact Determined prompt (on its stress-test page) to an AI tool, save the raw output, look up every reference, recompute every statistic, and score against the original rubric. Record the tool, the date and who scored. The 2026-11-11 run is the worked example.
+- **Full design (not run):** generate with two different models under all three strategies, anonymise and shuffle the outputs, and have each output scored by two models other than the one that produced it. This needs access to at least three models.
+- Raw outputs, checks and scores are committed under `research/results/`, one dated folder per run.
 
 ## Known limitations
 
 - Results apply to the exact models, prompts and date of the run; AI capabilities change quickly. The method is reusable; the numbers are not portable.
-- Two judges cannot establish reliable scoring on their own; a human colleague scoring the same outputs is the planned upgrade (see [evaluation/METHODS](https://github.com/iwyusdaz/ai-resilient-assessment-kit/blob/main/evaluation/METHODS.md)).
+- The agent-simulated run has one self-scoring judge, which is weaker than the planned two blind judges; even two judges cannot establish reliable scoring on their own. A human colleague scoring the same outputs is the planned upgrade (see [evaluation/METHODS](https://github.com/iwyusdaz/ai-resilient-assessment-kit/blob/main/evaluation/METHODS.md)).
 - Scoring is against our rubrics only; other rubrics might produce different vulnerability patterns.

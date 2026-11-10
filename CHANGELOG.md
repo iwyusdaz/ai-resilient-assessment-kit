@@ -22,6 +22,10 @@ All notable changes to this kit. Format loosely follows Keep a Changelog; versio
 - Social preview upload: image generated; uploading via the Settings UI is an owner task (no API).
 
 ## Unreleased
+### Changed: 2026-11-11 (agent-simulated evaluation replaces the API pipelines)
+- Ran a smaller agent-simulated evaluation (one AI agent, single model, no API): one Determined-strategy stress-test submission per case with web-checked references, recomputed statistics and self-scoring (A 18/20; B Q1 to Q4 with 0 errors; C 23/30); a 12-review role-played panel (2 major, 21 minor issues); 35 persona judgments of the workshop agenda (11 flags). Results in `research/results/agent-stress-test-2026-11-11/` and `evaluation/results/`; findings are open revision candidates in `docs/evaluation/revisions.md`.
+- Case stress-test pages, protocol, README, METHODS, STATUS, home page, research index and slide 4 now report these results with their limits (single model, self-scored, not blind; no cross-model agreement). Re-test on the redesigns and the Naive and Moderate strategies are marked "not run".
+- Removed: `research/run-stress-test.mjs`, `evaluation/run-review-panel.mjs`, `evaluation/run-simulated-participants.mjs`, `lib/env.mjs`, `.env.example`, and the `eval:*` npm scripts. The no-AI agenda check moved to `evaluation/tests/agenda-check.mjs` (`npm run test:agenda`). See DECISIONS D7.
 
 ### Changed — 2026-10-26 (revisions from the agent review)
 - Grading-time arithmetic reconciled in all three faculty-notes pages: headlines now equal the sum of their own rows (Case A ~14–16 min/student with the defence-sampling amortisation stated; Case B ≈68 h vs ≈210–250 h — "roughly 30%", was "about half"; Case C 13.5–14.5 min/student, Q&A aligned at 2 min/student for a 10-minute team session). Downstream repetitions (slide 8, pushback table) updated.

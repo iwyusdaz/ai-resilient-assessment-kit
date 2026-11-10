@@ -4,7 +4,7 @@ One-sentence summary: three common university assignments stress-tested against 
 
 **[Live site](https://iwyusdaz.github.io/ai-resilient-assessment-kit/)** · **[Start here](docs/index.md)** · Role: Learning designer (sole author), Lakeside State University case study
 
-**Evaluation status:** Automated accessibility testing and agent-based design reviews are complete. AI-simulated learner and review-panel evaluations are pending. No real learners have tested this yet. See evaluation/METHODS.md.
+**Evaluation status:** Automated accessibility testing, an agent design review, and agent-simulated stress-test, review-panel and workshop-participant runs (one AI agent, single model) are complete. No real students, educators or workshop participants have tested this yet. See evaluation/METHODS.md.
 
 **Context:** Lakeside State University — a fictional US public university preparing for ADA Title II digital accessibility compliance. All courses, enrolments and numbers in the cases are fictional; the frameworks and the evidence base are real and cited.
 
@@ -22,11 +22,11 @@ Faculty AI guidance is mostly generic: "use more orals", "ban it", "teach prompt
 ## My approach (analysis → design → build → evaluate)
 
 1. **Research grounding.** Verified sources with access dates (AIAS 2.1 level names; Sydney's two-lane approach; detection-reliability evidence) — [docs/research/literature-notes.md](docs/research/literature-notes.md).
-2. **Stress-test protocol.** Each original brief → three prompt strategies × two models → blind scoring by a judge panel where no model judges its own output — [docs/research/stress-test-protocol.md](docs/research/stress-test-protocol.md). The pipeline is built and dry-run tested; **scores are PENDING until API keys are added**.
+2. **Stress-test protocol.** Each original brief → three prompt strategies × two models → blind scoring by a judge panel where no model judges its own output ([docs/research/stress-test-protocol.md](docs/research/stress-test-protocol.md)). That full design needs model APIs and was not run; a smaller **agent-simulated** run (one agent, one Determined-strategy output per case, self-scored) was carried out instead.
 3. **Vulnerability analysis (published now, labelled as reasoning).** Which rubric criteria AI satisfies for free — fluency, plausible citations, template analysis — and which need a student's own process or live defence.
 4. **Three full redesigns.** Each: redesign rationale → per-stage AI-use levels (AIAS 2.1, icon + text) → student brief in plain language → new rubric with alignment table → faculty notes with grading-time arithmetic, 200+ scaling, accommodations, multilingual notes.
 5. **Tooling.** A six-question accessible decision tool and a complete 90-minute workshop (guide, slides, canvas, handout, pre/post survey).
-6. **Evaluation.** Automated accessibility audits, scripted keyboard/reflow tests, an agent review, and pending multi-model pipelines — [evaluation/METHODS.md](evaluation/METHODS.md).
+6. **Evaluation.** Automated accessibility audits, scripted keyboard/reflow tests, an agent review, and agent-simulated stress-test, review-panel and participant runs ([evaluation/METHODS.md](evaluation/METHODS.md)).
 
 ## Key design decisions
 
@@ -41,15 +41,16 @@ Faculty AI guidance is mostly generic: "use more orals", "ban it", "teach prompt
 
 ## Evidence and evaluation
 
-**What was measured (or is pending):**
+**What was measured:**
 
 - Automated accessibility: axe-core 4.11.1 — decision tool and workshop slides: **0 violations** (local, 2026-10-25; re-verified 2026-10-26 after the revision round). Scripted Playwright tests of the decision tool: **28/28** (keyboard-only completion, first-reveal focus with focus-stays-put on recompute, live-region announcements, Back/Start-over, error alerts, low-confidence warning, 320 px and 256 px reflow, no data leaves the page). Internal link integrity: **163 links across 43 files, all resolve**.
-- **AI stress-test scores: PENDING — requires API key.** The case pages show the vulnerability *reasoning* (labelled as such), exact prompts, and empty score tables. When `npm run eval:pending` runs with real keys, measured scores replace the tables and this section is updated.
+- **Agent-simulated stress test (2026-11-11, one AI agent, single model, self-scored, not blind):** one Determined-strategy submission per case, scored against the original rubrics: Case A essay **18/20**, Case B Q1 to Q4 with **0 errors** (Q5 to Q10 are not given in the brief), Case C report **23/30**. All 16 references were real (web check), so the expected fabrication did not appear; the essay instead misstated two details from sources the agent had not read. Both length targets were missed. The planned blind cross-model judge panel and the re-test on the redesigns were not run ([results](research/results/agent-stress-test-2026-11-11/summary.md), case stress-test pages).
+- **Agent-simulated review panel and workshop participants (2026-11-11, same agent):** 12 role-played reviews (3 roles × 4 files) found 2 major issues, both in Case A's defence (it is marked for a sampled fifth only, and a live defence for all 180 students would cost about 15 tutorial hours), and 21 minor ones; 35 persona judgments of the workshop agenda found 11 timing, clarity and accessibility flags. All are open revision candidates, not yet applied ([panel](evaluation/results/review-panel-summary.md), [participants](evaluation/results/simulated-participants-summary.md)). The original plan used two or three independent models; that could not be reproduced, so no cross-model agreement is reported.
 - Agent review (fresh-context reviewer agent, 2026-10-26): full review in `evaluation/agent-review.md`; dispositions and changes logged in `docs/evaluation/revisions.md` (DECISIONS R1–R4 record the judgment calls). Labelled as agent review; same-model limitation stated.
 
-**What this evidence cannot show:** student learning outcomes; real integrity-incident rates; results with future models or determined students using them; validation against human scoring (a human second scorer is the planned upgrade, protocol ready); whether the workshop "works" until it is delivered with real participants (exit form ready in `evaluation/human-protocol/`).
+**What this evidence cannot show:** student learning outcomes; how other AI models, other prompts or real students would perform (the agent-simulated runs use one agent that scored its own work); real integrity-incident rates; results with future models or determined students using them; validation against human scoring (a human second scorer is the planned upgrade, protocol ready); whether the workshop "works" until it is delivered with real participants (exit form ready in `evaluation/human-protocol/`).
 
-**What changed because of evidence so far:** the decision tool's incomplete-submit error became a `role=alert` with focus moved to the first unanswered question; slide navigation stayed linear/plain HTML after checking reveal.js accessibility trade-offs; the workshop agenda's arithmetic is verified by a mechanical check that runs in every pipeline dry-run.
+**What changed because of evidence so far:** the decision tool's incomplete-submit error became a `role=alert` with focus moved to the first unanswered question; slide navigation stayed linear/plain HTML after checking reveal.js accessibility trade-offs; the workshop agenda's arithmetic is verified by a mechanical check (`npm run test:agenda`); the agent-simulated stress test showed the Case A and C references were real but unread, which is now stated next to the vulnerability analyses.
 
 ## The three cases (one line each)
 
@@ -67,22 +68,22 @@ Faculty AI guidance is mostly generic: "use more orals", "ban it", "teach prompt
 
 ## What I'd do differently / next steps
 
-- Ship the stress-test numbers instead of (and alongside) the reasoning — the honest sequencing (reasoning first, measured numbers when the pipeline runs) is the right call, but the kit is visibly stronger with both.
-- Pair the blind AI judge panel with a human second scorer as soon as one is available; agreement statistics from AI-only judging have known limits.
+- Act on the open revision candidates from the agent-simulated runs, starting with Case A's defence sampling and its tutorial-hour cost.
+- Have a human second scorer mark the agent-simulated stress-test submissions, and re-test the redesigned tasks; self-scored output from one agent has known limits.
 - Add a fourth case from a non-Western curriculum context; the current three are US-flavoured.
 - Deliver the workshop for real and feed the exit-form data back into the guide.
 
 ## Tools used
 
-Node 25.6, Playwright 1.57.0, axe-core 4.11.1, gitleaks 8.30.1, GitHub Pages + Jekyll (Just the Docs v0.12.0, pinned), vanilla HTML/CSS/JS for the decision tool and slides, dotenv 17.3.1 for the pending pipelines. No local AI models were used anywhere; all LLM work goes through pending API pipelines with placeholder keys.
+Node 25.6, Playwright 1.57.0, axe-core 4.11.1, gitleaks 8.30.1, GitHub Pages + Jekyll (Just the Docs v0.12.0, pinned), vanilla HTML/CSS/JS for the decision tool and slides. No model APIs, model endpoints or local AI models are used anywhere; the agent-simulated evaluations were run by an AI agent in its own working session.
 
 ## Authorship disclosure
 
-This kit was authored with AI assistance (drafting, editing, pipeline code), then reviewed and structured by the human author whose portfolio it belongs to. The stress-test pipeline exists precisely so that any AI-performed scoring is labelled, blind, cross-model and reproducible — never invented. Agent-based reviews are labelled as such. [Email] · [LinkedIn]
+This kit was authored with AI assistance (drafting, editing, test code), then reviewed and structured by the human author whose portfolio it belongs to. Any AI-performed scoring is labelled with what performed it and how, with the raw outputs committed; nothing is invented. Agent-based reviews are labelled as such. [Email] · [LinkedIn]
 
 ## License and attribution
 
 - Learning content (prose, rubrics, briefs, workshop): **CC BY 4.0** — [LICENSE](LICENSE).
-- Code (decision tool, slides styling, pipelines, tests): **MIT** — [LICENSE-CODE](LICENSE-CODE).
+- Code (decision tool, slides styling, tests): **MIT**, see [LICENSE-CODE](LICENSE-CODE).
 - Third-party sources are cited with access dates in [research/literature-notes.md](docs/research/literature-notes.md) and [ATTRIBUTION.md](ATTRIBUTION.md).
 - AIAS level names © Perkins, Furze, Roe & MacVaugh (CC BY 4.0, aiassessmentscale.com); the two-lane framing is University of Sydney's (Teaching@Sydney). Both used with attribution under their licences.

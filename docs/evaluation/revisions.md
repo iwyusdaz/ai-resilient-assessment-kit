@@ -5,7 +5,7 @@ nav_order: 12
 
 # Revisions log
 
-Every documented evaluation (agent review, educator review, simulated-participant pipeline, real workshop delivery) lands its accepted and rejected changes here. **No invented feedback**, per the kit's honesty rules.
+Every documented evaluation (agent review, agent-simulated runs, educator review, real workshop delivery) lands its accepted and rejected changes here. **No invented feedback**, per the kit's honesty rules.
 
 ## How entries are made
 
@@ -15,13 +15,23 @@ Every documented evaluation (agent review, educator review, simulated-participan
 | Finding | What the reviewer said, in one or two sentences |
 | Change | What changed in the repo (file + substance), or **Rejected** with the reason |
 
-## Pending entries
+## Not yet run
+
+| # | Source | Status | Change |
+|---|---|---|---|
+| H1 | *Educator review (≥3 human educators)* | **Not yet recruited**; form ready in [`evaluation/human-protocol/`](https://github.com/iwyusdaz/ai-resilient-assessment-kit/tree/main/evaluation/human-protocol) | None yet |
+| H2 | *Real workshop delivery* | **Not run**; survey and review form ready | None yet |
+
+## Agent-simulated runs (one AI agent, single model, 2026-11-11)
+
+Source files: [review panel](https://github.com/iwyusdaz/ai-resilient-assessment-kit/blob/main/evaluation/results/review-panel-summary.md) (12 role-played reviews: 2 major, 21 minor issues), [simulated participants](https://github.com/iwyusdaz/ai-resilient-assessment-kit/blob/main/evaluation/results/simulated-participants-summary.md) (35 persona judgments: 11 flags) and the [stress test](https://github.com/iwyusdaz/ai-resilient-assessment-kit/blob/main/research/results/agent-stress-test-2026-11-11/summary.md). One agent played every role and persona and may share the author's underlying model; these are not educator or participant feedback. **None of the findings has been applied yet**; they are open revision candidates. S1 and S2 are the two major findings:
 
 | # | Source | Finding | Change |
 |---|---|---|---|
-| — | *Multi-model review panel* | **PENDING: requires API key** (`evaluation/run-review-panel.mjs`) | — |
-| — | *AI-simulated workshop participants* | **PENDING: requires API key** (`evaluation/run-simulated-participants.mjs`) | — |
-| — | *Educator review (≥3 human educators)* | **Not yet recruited** — form ready in [`evaluation/human-protocol/`](https://github.com/iwyusdaz/ai-resilient-assessment-kit/tree/main/evaluation/human-protocol) | — |
+| S1 | Agent-simulated panel, R1 (Case A) | The defence is marked for a sampled fifth only; for the other students it earns a completion mark, but the redesign page presents it as the secure check for everyone | **Open** |
+| S2 | Agent-simulated panel, R3 (Case A) | If every student completes a five-minute live defence, that is about 15 hours of tutorial time, the cost used to reject orals for all 180 | **Open** |
+| S3 | Agent-simulated participants (11 flags) and panel (21 minor issues) | Timing, clarity and accessibility details listed in the two summaries, e.g. a 2-minute break, no move time in the gallery walk, QR-only post-survey link, Case C grading-map mismatch | **Open** |
+| S4 | Agent-simulated stress test (Cases A and C) | All 16 references were real; the expected fabrication did not appear, but the essay misstated two source details it had not read | **Stated** on the Case A and C stress-test pages next to the analysis; no redesign change needed (the verification gate already targets unread sources) |
 
 ## Agent review (fresh-context reviewer agent, 2026-10-26)
 
@@ -46,5 +56,5 @@ Full review: [`evaluation/agent-review.md`](https://github.com/iwyusdaz/ai-resil
 
 ## Known gaps already on the list
 
-1. The workshop agenda's timing (90 minutes) has **not** been validated by delivery — the facilitator guide's timings are estimates; the simulated-participant pipeline is designed to stress them.
-2. The stress-test score tables are pending the API run; the vulnerability analyses are reasoning, and will be revised against measured results if the data disagrees.
+1. The workshop agenda's timing (90 minutes) has **not** been validated by delivery. The facilitator guide's timings are estimates; the agent-simulated participants judged 33 of 35 persona and segment timings realistic, which is not delivery evidence.
+2. The stress-test score tables come from one agent-simulated, self-scored run (one Determined output per case). The planned blind cross-model run and the re-test on the redesigns have not been done; the vulnerability analyses remain reasoning.

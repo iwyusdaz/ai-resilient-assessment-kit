@@ -1,13 +1,13 @@
 # Design decisions
 
-The reasoning behind the choices that shape this kit. Each decision records alternatives and the trade-off accepted. (The stress-test pending status is treated as a decision, not just a gap — see D1.)
+The reasoning behind the choices that shape this kit. Each decision records alternatives and the trade-off accepted. (How the stress test was actually run is treated as a decision, not just a gap: see D1, D3 and D7.)
 
 ## D1 — Publish vulnerability reasoning before measured scores
 
 **Decision.** Ship the kit with the stress-test protocol, exact prompts, and labelled design-reasoning analyses, while every score table stays "PENDING — requires API key". No fabricated outputs, no "constructed examples" of AI text.
 **Alternatives.** (a) Wait for the API run before publishing anything — delays the redesigns and workshop that are ready now. (b) Publish invented "illustrative AI outputs" — dishonest and unusable as evidence.
 **Rationale.** The redesigns follow from *structural* validity reasoning (what the task certifies vs. what models produce), which stands or falls on its own logic; measured scores will strengthen or revise them via the re-test. The portfolio's honesty rules (nothing pending may be faked) make (b) forbidden outright.
-**Consequence.** Case pages carry a status note distinguishing reasoning from results; the rerun procedure in `evaluation/METHODS.md` defines how tables get filled and how the reasoning gets revised if the data disagrees.
+**Consequence.** Case pages carry a status note distinguishing reasoning from results. Since 2026-11-11 the tables hold the agent-simulated results (D7), and each case page states where they support or contradict the reasoning.
 
 ## D2 — AIAS 2.1, level names quoted verbatim, per stage
 
@@ -21,7 +21,7 @@ The reasoning behind the choices that shape this kit. Each decision records alte
 **Decision.** MODEL_A outputs are judged by MODEL_B + MODEL_C and vice versa; no model judges its own output; MODEL_C is required (not optional) for the stress test.
 **Alternatives.** Two slots with self-judging excluded (possible: A→B, B→A) — but a two-judge panel with per-criterion concordance needs a tiebreaker; self-judging (rejected outright: bias).
 **Rationale.** Matches the portfolio's evidence rules for blind scoring and makes agreement reporting meaningful (mean total difference + per-criterion exact agreement, reported with the caveat that it is not human-validated).
-**Consequence.** `.env.example` needs three slots; the pipeline exits before any network call if any slot is a placeholder.
+**Consequence.** This design needs three independent models. It was never run; D7 records what replaced it and the limitation that follows.
 
 ## D4 — Slides as plain semantic HTML, not reveal.js
 
@@ -43,6 +43,12 @@ The reasoning behind the choices that shape this kit. Each decision records alte
 **Alternatives.** Anonymised real cases (ethics-heavy, no real student work allowed anyway); no framing (weaker, less transferable detail).
 **Rationale.** One-line description shared across the portfolio keeps the story coherent while every number stays fictional and labelled.
 **Consequence.** Enrolments and grading estimates are design targets, never measurements — stated in each faculty-notes page.
+
+## D7: Agent-simulated evaluation instead of API pipelines (2026-11-11)
+**Decision.** Remove the three API-key pipelines (stress test, review panel, simulated participants), their shared env helper and `.env.example`. Replace them with a smaller evaluation run by one AI agent in its own working session: one Determined-strategy submission per case with reference and computation checks and self-scoring, a 12-review role-played panel, and 35 persona judgments of the workshop agenda. Keep the no-AI agenda arithmetic check as `npm run test:agenda`.
+**Alternatives.** (a) Keep the pipelines and wait for model API access: results would stay empty indefinitely. (b) Run local or open-source models: ruled out by the owner. (c) Remove the evaluations entirely: loses the only evidence on how AI output fares against the original rubrics.
+**Rationale.** A labelled single-model result is more useful than an empty table, as long as its limits are stated next to every number.
+**Consequence.** The blind cross-model design of D3 is not reproduced: one agent wrote and scored its own work, so there is no judge agreement and no independence between reviewer roles or personas. Every results file, case page, README and METHODS entry says so. The Naive and Moderate strategies and the re-test on the redesigns are marked "not run".
 
 ## Revision rounds
 

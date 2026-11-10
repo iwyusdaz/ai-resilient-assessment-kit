@@ -22,8 +22,8 @@ How this kit credits the work it builds on. Licenses: learning content is CC BY 
 
 - **Lakeside State University** — "a fictional US public university preparing for ADA Title II digital accessibility compliance" — the shared case-study setting of this portfolio.
 - SOC 101, STAT 201, PSY 250 briefs, rubrics, enrolments and grading-time estimates: constructed by the kit's author to be realistic, not real courses. No real student work anywhere.
-- The five workshop personas in `evaluation/run-simulated-participants.mjs` are fictional and labelled as simulated.
+- The five workshop personas in `evaluation/results/simulated-participants-summary.md` are fictional and labelled as simulated.
 
 ## Tools
 
-Node, Playwright (Apache-2.0), axe-core (MPL-2.0), Just the Docs theme (MIT, pinned v0.12.0), gitleaks (MIT), dotenv (MIT). Each used unmodified except configuration.
+Node, Playwright (Apache-2.0), axe-core (MPL-2.0), Just the Docs theme (MIT, pinned v0.12.0), gitleaks (MIT). Each used unmodified except configuration.
